@@ -1,4 +1,39 @@
 body {
   margin: 0 auto;
   padding: 0;
+}
+
+.container {
+  margin: 0 auto;
+  background-color: #1E2C30;
+  width: 1440px;
+  color: white;
+}
+.container .box_1,
+.container .box_2 {
+  display: flex;
+  justify-content: space-between;
+}
+.container .tpait {
+  padding-left: 120px;
+}
+.container .box_3 {
+  background-color: #111E22;
+  height: 62px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+.container .box_1 {
+  padding: 70px 120px 21px 120px;
+}
+.container .box_2 {
+  padding: 41px 120px 46px 120px;
+  letter-spacing: 0.17px;
+}
+.container .box_2 .text__text {
+  font-size: 17px;
+}
+.container .box_2 .text__title {
+  font-size: 22px;
 }/*# sourceMappingURL=style.css.map */

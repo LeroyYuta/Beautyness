@@ -2,3 +2,71 @@ body {
     margin: 0 auto;
     padding: 0;
 }
+
+
+//footer 
+
+$bgColor: #1E2C30;
+$bgColorBox_3: #111E22;
+$colorText: white;
+$text__title: 'Playfair Display', serif;
+$text__text: 'Manrope', sans-serif;
+
+.container {
+    margin: 0 auto;
+    background-color: $bgColor;
+    width: 1440px;
+    color: $colorText;
+
+    .logo {
+        display: flex;
+        align-items: center;
+
+        .logo__item_text {
+            margin-left: 21px;
+        }
+    }
+
+    .box_1,
+    .box_2 {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .box_3 {
+        background-color: $bgColorBox_3;
+        height: 62px;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+
+        .box_3__text {
+            font-family: $text__text;
+            font-size: 15px;
+            font-weight: 400;
+        }
+    }
+
+    .box_1 {
+        padding: 70px 120px 21px 120px;
+        align-items: center;
+    }
+
+    .box_2 {
+        padding: 41px 120px 46px 120px;
+        letter-spacing: 0.17px;
+
+        .text__text {
+            font-size: 17px;
+            font-family: $text__text;
+            font-weight: 400;
+        }
+
+        .text__title {
+            font-size: 22px;
+            font-family: $text__title;
+            font-weight: 400;
+        }
+    }
+
+}
