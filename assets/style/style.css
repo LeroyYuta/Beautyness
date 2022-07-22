@@ -1,4 +1,310 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Playfair+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Playfair+Display&display=swap");
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
 body {
   margin: 0 auto;
   padding: 0;
-}/*# sourceMappingURL=style.css.map */
+  font-family: "Playfair Display", serif;
+  color: #141414;
+}
+
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.wrapper__content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.wrapper-blue {
+  background-color: #EBF3F5;
+  margin-top: 6px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+.wrapper-blue .main__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* header-start */
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.header .header__logo {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.header__phone {
+  display: flex;
+  align-items: center;
+}
+.header__phone .header__phone-pic {
+  margin-right: 10px;
+}
+.header__phone .header__phone-num {
+  text-decoration: none;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #141414;
+}
+
+.header__list {
+  display: flex;
+}
+.header__list .header__item {
+  list-style-type: none;
+  margin: 10px;
+}
+.header__list .header__item .header__link {
+  text-decoration: none;
+  color: #141414;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 26px;
+}
+.header__list .header__item .header__link:hover {
+  color: #5C8692;
+}
+
+.header__button {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.nav__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 201px;
+  height: 59px;
+  border: 0 none;
+  background-color: #5C8692;
+  color: #fff;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+.nav__button:hover {
+  background-color: #141414;
+  color: #EBF3F5;
+}
+
+/* header-end */
+/* main-start */
+.main__container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main__information {
+  display: flex;
+  flex-direction: column;
+}
+.main__information .content__preview {
+  align-items: flex-end;
+  color: #5C8692;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: -10px;
+  margin-top: 60px;
+  padding-left: 30px;
+  background: url(/assets/img/first_section/zwe.svg) no-repeat left;
+}
+.main__information .content__title {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 55px;
+  line-height: 72px;
+  letter-spacing: 0.66px;
+  color: #141414;
+  max-width: 396px;
+  max-height: 215px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.main__information .content_description {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 30px;
+  color: #555555;
+  max-width: 483px;
+  max-height: 92px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.main__information .main__button {
+  color: #fff;
+  background-color: #5C8692;
+  width: 238px;
+  height: 57px;
+  border: 0 none;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 1.56px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  margin-top: 40px;
+}
+.main__information .main__button:hover {
+  background-color: #141414;
+  color: #EBF3F5;
+}
+
+.main__image {
+  display: flex;
+  align-items: flex-end;
+}
+.main__image .header-girl {
+  width: 540px;
+  height: 550px;
+  padding: 80px;
+  background: url(/assets/img/first_section/Rectangle.svg) no-repeat right;
+  background-size: 80%;
+}
+
+/* main-end */
+/* cards-start */
+.container-cards {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 50px;
+  justify-content: space-between;
+}
+.container-cards .content__cards {
+  display: flex;
+  flex-direction: column;
+  max-width: 380px;
+  margin-bottom: 50px;
+}
+.container-cards .card__title {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 36px;
+  letter-spacing: 0.312px;
+}
+.container-cards .card__description {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 31px;
+  letter-spacing: 0.36px;
+  color: #555555;
+}
+.container-cards .card__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 157px;
+  height: 57px;
+  border: 2px solid #5C8692;
+  background: transparent;
+}
+.container-cards .card__button:hover {
+  background: #5C8692;
+  color: #fff;
+}
+
+/* cards-end */
+/* section-start */
+.section__container {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 50px;
+  margin-bottom: -470px;
+  justify-content: space-between;
+}
+.section__container .left__section {
+  padding-right: 140px;
+}
+.section__container .section__title {
+  padding-top: 30px;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #5C8692;
+}
+.section__container .section__info {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 45px;
+  line-height: 58px;
+  letter-spacing: 0.45px;
+}
+.section__container .section__description {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 31px;
+  color: #555555;
+}
+.section__container .section__icons {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+.section__container .section__icons .section__item {
+  display: flex;
+  max-width: 166px;
+  max-height: 162px;
+}
+
+.section__images-girl {
+  position: relative;
+}
+.section__images-girl .section__girl {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  bottom: 530px;
+  right: 30px;
+}
+
+/* section-end *//*# sourceMappingURL=style.css.map */
