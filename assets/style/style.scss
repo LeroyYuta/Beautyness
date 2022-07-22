@@ -43,6 +43,7 @@ body {
  /* header-start */
 .header {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
     .header__logo {
@@ -259,6 +260,7 @@ body {
 
 .section__container {
     display: flex;
+    flex-wrap: wrap;
     padding-top: 50px;
     margin-bottom: -470px;
     justify-content: space-between;
