@@ -1,72 +1,106 @@
-body {
-    margin: 0 auto;
-    padding: 0;
-}
-
-
-//footer 
-
 $bgColor: #1E2C30;
 $bgColorBox_3: #111E22;
 $colorText: white;
 $text__title: 'Playfair Display', serif;
 $text__text: 'Manrope', sans-serif;
 
+@mixin font {
+    font-family: $text__text;
+    font-weight: 400;
+}
+
+body {
+    margin: 0 auto;
+    padding: 0;
+}
+
+//Latest Updates
+
 .container {
     margin: 0 auto;
-    background-color: $bgColor;
-    width: 1440px;
+    width: 1200px;
+}
+
+.section_title {
+    text-align: center;
+    font-family: $text__title;
+    color: #141414;
+    font-size: 45px;
+    margin-bottom: 6.5%;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-around;
+
+    .box:not(:last-child) {
+        margin-right: 2%;
+
+        .box__img {
+            width: 387px;
+            height: 342px;
+
+            .box__img-img {
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+
+
+//footer 
+
+footer {
     color: $colorText;
+    background-color: $bgColor
+}
 
-    .logo {
-        display: flex;
-        align-items: center;
+.logo {
+    display: flex;
+    align-items: center;
 
-        .logo__item_text {
-            margin-left: 21px;
-        }
+    .logo__item_text {
+        margin-left: 21px;
+    }
+}
+
+.box_1,
+.box_2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.box_3 {
+    background-color: $bgColorBox_3;
+    height: 6%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+
+    .box_3__text {
+        @include font;
+        font-size: 15px;
+    }
+}
+
+.box_1 {
+    padding: 70px 120px 21px 120px;
+    align-items: center;
+}
+
+.box_2 {
+    padding: 41px 120px 46px 120px;
+    letter-spacing: 0.17px;
+
+    .text__text {
+        font-size: 17px;
+        @include font;
     }
 
-    .box_1,
-    .box_2 {
-        display: flex;
-        justify-content: space-between;
+    .text__title {
+        font-size: 22px;
+        font-family: $text__title;
+        font-weight: 400;
     }
-
-    .box_3 {
-        background-color: $bgColorBox_3;
-        height: 62px;
-        justify-content: center;
-        display: flex;
-        align-items: center;
-
-        .box_3__text {
-            font-family: $text__text;
-            font-size: 15px;
-            font-weight: 400;
-        }
-    }
-
-    .box_1 {
-        padding: 70px 120px 21px 120px;
-        align-items: center;
-    }
-
-    .box_2 {
-        padding: 41px 120px 46px 120px;
-        letter-spacing: 0.17px;
-
-        .text__text {
-            font-size: 17px;
-            font-family: $text__text;
-            font-weight: 400;
-        }
-
-        .text__title {
-            font-size: 22px;
-            font-family: $text__title;
-            font-weight: 400;
-        }
-    }
-
 }

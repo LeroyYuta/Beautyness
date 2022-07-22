@@ -5,35 +5,80 @@ body {
 
 .container {
   margin: 0 auto;
-  background-color: #1E2C30;
-  width: 1440px;
-  color: white;
+  width: 1200px;
 }
-.container .box_1,
-.container .box_2 {
+
+.section_title {
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  color: #141414;
+  font-size: 45px;
+  margin-bottom: 6.5%;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+.wrapper .box:not(:last-child) {
+  margin-right: 2%;
+}
+.wrapper .box:not(:last-child) .box__img {
+  width: 387px;
+  height: 342px;
+}
+.wrapper .box:not(:last-child) .box__img .box__img-img {
+  max-width: 100%;
+}
+
+footer {
+  color: white;
+  background-color: #1E2C30;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo .logo__item_text {
+  margin-left: 21px;
+}
+
+.box_1,
+.box_2 {
   display: flex;
   justify-content: space-between;
 }
-.container .tpait {
-  padding-left: 120px;
-}
-.container .box_3 {
+
+.box_3 {
   background-color: #111E22;
-  height: 62px;
+  height: 6%;
   justify-content: center;
   display: flex;
   align-items: center;
 }
-.container .box_1 {
-  padding: 70px 120px 21px 120px;
+.box_3 .box_3__text {
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
 }
-.container .box_2 {
+
+.box_1 {
+  padding: 70px 120px 21px 120px;
+  align-items: center;
+}
+
+.box_2 {
   padding: 41px 120px 46px 120px;
   letter-spacing: 0.17px;
 }
-.container .box_2 .text__text {
+.box_2 .text__text {
   font-size: 17px;
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
 }
-.container .box_2 .text__title {
+.box_2 .text__title {
   font-size: 22px;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
 }/*# sourceMappingURL=style.css.map */
