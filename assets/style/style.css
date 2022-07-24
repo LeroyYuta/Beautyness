@@ -27,80 +27,75 @@ body {
 
 .wrapper-blue {
   background-color: #EBF3F5;
-  margin-top: 6px;
-  padding-top: 10px;
-  padding-bottom: 20px;
-}
-.wrapper-blue .main__container {
-  display: flex;
-  justify-content: space-between;
 }
 
-/* header-start */
+/* header start */
 .header {
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
   justify-content: space-between;
+  padding: 10px 20px;
+}
+.header .header__left-section {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 }
 .header .header__logo {
-  display: flex;
-  align-items: center;
-  margin-left: 20px;
+  margin-right: 35px;
 }
-
-.header__phone {
-  display: flex;
-  align-items: center;
+.header .header__phone-pic {
+  position: relative;
+  top: 6;
+  left: -3;
 }
-.header__phone .header__phone-pic {
-  margin-right: 10px;
-}
-.header__phone .header__phone-num {
+.header .header__phone-num {
   text-decoration: none;
   font-family: "Manrope";
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 17px;
   line-height: 24px;
   color: #141414;
 }
-
-.header__list {
+.header .header__right-section {
   display: flex;
+  align-items: center;
 }
-.header__list .header__item {
+.header .header__list {
+  display: flex;
+  flex-wrap: wrap;
+  padding-right: 15px;
+}
+.header .header__item {
   list-style-type: none;
-  margin: 10px;
+  margin: 0px 19px;
 }
-.header__list .header__item .header__link {
+.header .header__link {
   text-decoration: none;
-  color: #141414;
   font-family: "Manrope";
   font-style: normal;
   font-weight: 400;
   font-size: 17px;
   line-height: 26px;
+  color: #141414;
 }
-.header__list .header__item .header__link:hover {
+.header .header__link:hover {
   color: #5C8692;
+  font-size: 20px;
 }
-
-.header__button {
-  display: flex;
-  align-items: center;
-  margin-right: 20px;
+.header .header__pics {
+  padding-right: 25px;
 }
-
-.nav__button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 201px;
-  height: 59px;
-  border: 0 none;
+.header .header__link-pic {
+  margin: 0px 6px;
+  text-decoration: none;
+}
+.header .header__button {
+  position: relative;
   background-color: #5C8692;
-  color: #fff;
+  width: 201px;
+  height: 58px;
+  border: none;
   font-family: "Manrope";
   font-style: normal;
   font-weight: 400;
@@ -108,25 +103,33 @@ body {
   line-height: 21px;
   letter-spacing: 1.4px;
   text-transform: uppercase;
+  color: white;
 }
-.nav__button:hover {
+.header .header__button .header__button-pic {
+  position: relative;
+  top: 3;
+}
+.header .header__button:hover {
   background-color: #141414;
-  color: #EBF3F5;
 }
 
-/* header-end */
-/* main-start */
+/* header end */
+/* main start */
 .main__container {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 70px;
+  padding-bottom: 70px;
 }
 
 .main__information {
   display: flex;
   flex-direction: column;
+  flex-basis: 50%;
+  align-items: flex-start;
+  justify-content: space-evenly;
 }
 .main__information .content__preview {
-  align-items: flex-end;
   color: #5C8692;
   font-family: "Manrope";
   font-style: normal;
@@ -135,27 +138,26 @@ body {
   line-height: 22px;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  margin-bottom: -10px;
-  margin-top: 60px;
   padding-left: 30px;
   background: url(/assets/img/first_section/zwe.svg) no-repeat left;
 }
 .main__information .content__title {
   font-family: "Playfair Display";
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 55px;
   line-height: 72px;
   letter-spacing: 0.66px;
   color: #141414;
-  max-width: 396px;
-  max-height: 215px;
-  margin-bottom: 10px;
-  margin-top: 10px;
+  transform: translate(-120%, 0px);
+  opacity: 0;
+  transition: all 1s ease 0s;
 }
-.main__information .content_description {
-  display: flex;
-  flex-wrap: wrap;
+.main__information .content__title._active {
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
+.main__information .content__description {
   font-family: "Manrope";
   font-style: normal;
   font-weight: 400;
@@ -164,8 +166,14 @@ body {
   color: #555555;
   max-width: 483px;
   max-height: 92px;
-  margin-bottom: 10px;
-  margin-top: 10px;
+  transform: translate(500%, 0px);
+  opacity: 0;
+  transition: all 1s ease 0s;
+}
+.main__information .content__description._active {
+  transform: translate(0px, 0px);
+  opacity: 1;
+  transition: all 1s ease 0.1s;
 }
 .main__information .main__button {
   color: #fff;
@@ -181,39 +189,54 @@ body {
   text-align: center;
   letter-spacing: 1.56px;
   text-transform: uppercase;
-  margin-bottom: 10px;
-  margin-top: 40px;
 }
 .main__information .main__button:hover {
   background-color: #141414;
   color: #EBF3F5;
+  transform: scale(1.05);
 }
 
 .main__image {
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  flex-basis: 50%;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+}
+.main__image .girl-wrapper {
+  max-width: 85%;
+  position: absolute;
+  right: 0;
 }
 .main__image .header-girl {
-  width: 540px;
-  height: 550px;
-  padding: 80px;
-  background: url(/assets/img/first_section/Rectangle.svg) no-repeat right;
-  background-size: 80%;
+  max-width: 90%;
+  max-height: 90%;
+  z-index: 1;
+}
+.main__image .header-girl:hover {
+  transform: scale(1.05);
 }
 
-/* main-end */
-/* cards-start */
+/* main end */
+/* cards start */
 .container-cards {
-  display: flex;
-  flex-wrap: wrap;
-  padding-top: 50px;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding-top: 70px;
+  padding-bottom: 70px;
 }
 .container-cards .content__cards {
   display: flex;
   flex-direction: column;
-  max-width: 380px;
   margin-bottom: 50px;
+  max-width: 380px;
+  position: relative;
+  overflow: hidden;
+}
+.container-cards .content__cards .card__pic:hover {
+  transform: scale(1.05);
 }
 .container-cards .card__title {
   font-family: "Playfair Display";
@@ -232,7 +255,8 @@ body {
   letter-spacing: 0.36px;
   color: #555555;
 }
-.container-cards .card__button {
+
+.card__button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -241,25 +265,27 @@ body {
   border: 2px solid #5C8692;
   background: transparent;
 }
-.container-cards .card__button:hover {
+.card__button:hover {
   background: #5C8692;
   color: #fff;
 }
 
-/* cards-end */
-/* section-start */
+/* cards end */
+/* section-gril start */
 .section__container {
   display: flex;
-  flex-wrap: wrap;
-  padding-top: 50px;
-  margin-bottom: -470px;
-  justify-content: space-between;
+  padding-top: 70px;
+  padding-bottom: 70px;
 }
 .section__container .left__section {
-  padding-right: 140px;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50%;
+  align-items: flex-start;
+  justify-content: space-evenly;
 }
-.section__container .section__title {
-  padding-top: 30px;
+
+.section__title {
   font-family: "Manrope";
   font-style: normal;
   font-weight: 400;
@@ -269,7 +295,8 @@ body {
   text-transform: uppercase;
   color: #5C8692;
 }
-.section__container .section__info {
+
+.section__info {
   font-family: "Playfair Display";
   font-style: normal;
   font-weight: 400;
@@ -277,7 +304,8 @@ body {
   line-height: 58px;
   letter-spacing: 0.45px;
 }
-.section__container .section__description {
+
+.section__description {
   font-family: "Manrope";
   font-style: normal;
   font-weight: 400;
@@ -285,26 +313,41 @@ body {
   line-height: 31px;
   color: #555555;
 }
-.section__container .section__icons {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 20px;
-}
-.section__container .section__icons .section__item {
-  display: flex;
-  max-width: 166px;
-  max-height: 162px;
-}
 
-.section__images-girl {
-  position: relative;
-}
-.section__images-girl .section__girl {
-  position: relative;
+.section__icons {
+  display: flex;
   width: 100%;
-  height: 100%;
-  bottom: 530px;
-  right: 30px;
+  justify-content: space-between;
+  position: relative;
+}
+.section__icons .item-pic {
+  width: 166px;
+  height: 162px;
+}
+.section__icons .item-pic:hover {
+  transform: scale(1.1);
 }
 
-/* section-end *//*# sourceMappingURL=style.css.map */
+.right__section {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50%;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+}
+.right__section .section__back-pic {
+  max-width: 85%;
+  position: absolute;
+  right: 0;
+}
+.right__section .section__girl-pic {
+  max-width: 85%;
+  max-height: 85%;
+  z-index: 1;
+}
+.right__section .section__girl-pic:hover {
+  transform: scale(1.05);
+}
+
+/* section-gril end *//*# sourceMappingURL=style.css.map */
