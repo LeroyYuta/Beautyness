@@ -8,6 +8,7 @@ section {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0;
+  background: #E5E5E5;
 }
 
 .box {
@@ -94,4 +95,63 @@ section {
   letter-spacing: 1.56px;
   cursor: pointer;
   color: blackColor;
+}
+.box .btn:hover {
+  color: #fff;
+  background: #5C8692;
+  transition: all 0.2s linear;
+}
+
+.conteiner__txt {
+  font-family: fontM;
+  font-style: fontStyle;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #5C8692;
+  text-align: center;
+}
+.conteiner__tit {
+  font-family: "Playfair Display", serif;
+  font-style: fontStyle;
+  font-weight: 400;
+  font-size: 45px;
+  line-height: 58px;
+  text-align: center;
+  letter-spacing: 0.45px;
+  color: blackColor;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.conteiner__box-1, .conteiner__box-2 {
+  -moz-columns: 3;
+       columns: 3;
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-bottom: 70px;
+  padding-top: 70px;
+}
+
+.title {
+  font-family: "Playfair Display", serif;
+  letter-spacing: 0.264px;
+  font-style: fontStyle;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  text-transform: capitalize;
+  display: flex;
+  justify-content: space-between;
+  color: blackColor;
+}
+
+.text {
+  letter-spacing: 0.36px;
+  font-style: fontStyle;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  color: #555555;
 }/*# sourceMappingURL=style.css.map */
