@@ -494,6 +494,7 @@ form {
 .form__procedura {
   padding-top: 50px;
   text-align: center;
+  padding-bottom: 30px;
 }
 
 .form__time {
@@ -536,7 +537,6 @@ form {
   width: 100px;
   font-family: "Playfair Display", serif;
   font-size: 15px;
-  padding-top: 30px;
 }
 
 .date:hover {
