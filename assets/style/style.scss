@@ -48,14 +48,6 @@ body {
     background-color: $header_background;
 }
 
-<<<<<<< HEAD
-/* header start */
-.header {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 20px;
-
-=======
  /* header start */
 
  .header {
@@ -63,7 +55,6 @@ body {
     justify-content: space-between;
     padding: 10px 20px;
     transition: .2s linear;
->>>>>>> alexvolk
     .header__left-section {
         display: flex;
         align-items: center;
@@ -154,12 +145,6 @@ body {
         &:hover {
             background-color: $main_color;
         }
-<<<<<<< HEAD
-    }
-}
-
-/* header end */
-=======
     } 
  }
 
@@ -187,7 +172,6 @@ body {
     bottom: 0;
 }
  /* header end */
->>>>>>> alexvolk
 
 
 
@@ -1206,16 +1190,6 @@ footer {
     }
 /* section-gril end */
 
-<<<<<<< HEAD
-    .text__title {
-        font-size: 22px;
-        font-family: $text__title;
-        font-weight: 400;
-    }
-}
-
-// footer Alex
-=======
 /* media start */
 @media screen and (max-width: 960px) {
     .header__burger {
@@ -1273,11 +1247,6 @@ footer {
         transform: translateY(-50%) rotate(-45deg);
     }
 }
+}
 
-
-
-
-
-
-    /* media start */
->>>>>>> alexvolk
+  /* media end */alexvolk
