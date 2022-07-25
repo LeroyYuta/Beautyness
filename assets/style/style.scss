@@ -103,12 +103,10 @@ body {
     }
 }
 
-
 .wrapper-2 {
     display: none;
     padding-bottom: 11%;
 }
-
 
 //footer 
 
@@ -170,5 +168,15 @@ footer {
         font-size: 22px;
         font-family: $text__title;
         font-weight: 400;
+    }
+
+    a {
+        text-decoration: none;
+        color: $colorText;
+
+        &:hover {
+            color: #5C8692;
+            transition-duration: 500ms;
+        }
     }
 }
