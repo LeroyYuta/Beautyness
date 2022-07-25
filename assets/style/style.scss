@@ -2,6 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Playfair+Display&display=swap');
 @import "variables.scss";
 
+$main_color: #141414;
+$button_color: #5C8692;
+$header_background: #EBF3F5;
 // lera
 @mixin font($fontF, $fontS, $fontW, $lineH, $letterS) {
     font-family: $fontF;
@@ -17,26 +20,23 @@
     font-weight: 400;
 }
 
+
 html {
     box-sizing: border-box;
 }
 
-*,
-*::before,
-*::after {
+*, *::before, *::after {
     box-sizing: inherit;
 }
 
 body {
-    margin: 0 auto;
-    padding: 0;
     font-family: 'Playfair Display', serif;
-    color: $main_color;
+    color: $main_color; 
 }
 
 .wrapper {
     max-width: 1440px;
-    margin: 0 auto;
+    margin: 0 auto; 
 }
 
 .wrapper__content {
@@ -58,19 +58,16 @@ body {
     .header__left-section {
         display: flex;
         align-items: center;
-        flex-wrap: wrap;
+        flex-wrap: wrap;   
     }
-
     .header__logo {
         margin-right: 35px;
     }
-
     .header__phone-pic {
         position: relative;
         top: 6;
         left: -3;
     }
-
     .header__phone-num {
         text-decoration: none;
         font-family: 'Manrope';
@@ -80,48 +77,41 @@ body {
         line-height: 24px;
         color: $main_color;
     }
-
     .header__right-section {
         display: flex;
-        align-items: center;
+        align-items: center; 
     }
-
+ 
     .header__list {
         display: flex;
         flex-wrap: wrap;
         padding-right: 15px;
     }
-
     .header__item {
-        list-style-type: none;
-        margin: 0px 19px;
+    list-style-type: none;
+    margin: 0px 19px;
     }
-
     .header__link {
         text-decoration: none;
         font-family: 'Manrope';
         font-style: normal;
         font-weight: 400;
         font-size: 17px;
-        line-height: 26px;
+        line-height: 26px; 
         color: $main_color;
-
         &:hover {
             color: $button_color;
             font-size: 20px;
         }
     }
-
     .header__pics {
         padding-right: 25px;
     }
-
     .header__link-pic {
         margin: 0px 6px;
         text-decoration: none;
         width: 50%;
     }
-
     .header__button {
         position: relative;
         background-color: $button_color;
@@ -136,12 +126,10 @@ body {
         letter-spacing: 1.4px;
         text-transform: uppercase;
         color: white;
-
         .header__button-pic {
             position: relative;
             top: 3;
         }
-
         &:hover {
             background-color: $main_color;
         }
@@ -175,21 +163,20 @@ body {
 
 
 
-/* main start */
-.main__container {
+ /* main start */                     
+ .main__container {
     display: flex;
     justify-content: space-between;
     padding-top: 70px;
     padding-bottom: 70px;
-}
+ }
 
-.main__information {
+ .main__information{
     display: flex;
     flex-direction: column;
     flex-basis: 50%;
     align-items: flex-start;
     justify-content: space-evenly;
-
     .content__preview {
         color: $button_color;
         font-family: 'Manrope';
@@ -202,7 +189,6 @@ body {
         padding-left: 30px;
         background: url(/assets/img/first_section/zwe.svg) no-repeat left;
     }
-
     .content__title {
         font-family: 'Playfair Display';
         font-style: normal;
@@ -213,14 +199,12 @@ body {
         color: $main_color;
         transform: translate(-100%, 0px);
         opacity: 0;
-        transition: all 1s ease 0s;
+        transition: all 1s ease 0s;     
     }
-
     .content__title._active {
         transform: translate(0px, 0px);
         opacity: 1;
     }
-
     .content__description {
         font-family: 'Manrope';
         font-style: normal;
@@ -234,7 +218,6 @@ body {
         opacity: 0;
         transition: all 1s ease 0s;
     }
-
     .content__description._active {
         transform: translate(0px, 0px);
         opacity: 1;
@@ -255,7 +238,6 @@ body {
         text-align: center;
         letter-spacing: 1.56px;
         text-transform: uppercase;
-
         &:hover {
             background-color: #141414;
             color: $header_background;
@@ -269,51 +251,44 @@ body {
     flex-direction: column;
     flex-basis: 50%;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-evenly; 
     position: relative;
-
     .girl-wrapper {
         max-width: 85%;
         position: absolute;
         right: 0;
     }
-
     .header-girl {
         max-width: 90%;
         max-height: 90%;
         z-index: 1;
-
         &:hover {
             transform: scale(1.05);
         }
     }
 }
-
-/* main end */
-
+ /* main end */ 
 
 
-/* cards start */
+
+ /* cards start */ 
 .container-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     padding-top: 70px;
     padding-bottom: 70px;
-
     .content__cards {
         display: flex;
-        flex-direction: column;
+        flex-direction: column;   
         margin-bottom: 50px;
         max-width: 380px;
         position: relative;
         overflow: hidden;
-
         .card__pic:hover {
-            transform: scale(1.05);
+        transform: scale(1.05);
         }
     }
-
     .card__title {
         font-family: 'Playfair Display';
         font-style: normal;
@@ -322,7 +297,6 @@ body {
         line-height: 36px;
         letter-spacing: 0.312px;
     }
-
     .card__description {
         font-family: 'Manrope';
         font-style: normal;
@@ -331,23 +305,21 @@ body {
         line-height: 31px;
         letter-spacing: 0.36px;
         color: #555555;
+    }    
+ }
+    .card__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 157px;
+        height: 57px;
+        border: 2px solid #5C8692;
+        background: transparent;
+        &:hover {
+            background: $button_color;
+            color: #fff;
+        } 
     }
-}
-
-.card__button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 157px;
-    height: 57px;
-    border: 2px solid #5C8692;
-    background: transparent;
-
-    &:hover {
-        background: $button_color;
-        color: #fff;
-    }
-}
 
 /* cards end */
 
@@ -358,7 +330,6 @@ body {
     display: flex;
     padding-top: 70px;
     padding-bottom: 70px;
-
     .left__section {
         display: flex;
         flex-direction: column;
@@ -366,79 +337,128 @@ body {
         align-items: flex-start;
         justify-content: space-evenly;
     }
-}
-
-.section__title {
-    font-family: 'Manrope';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 22px;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    color: $button_color;
-}
-
-.section__info {
-    font-family: 'Playfair Display';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 45px;
-    line-height: 58px;
-    letter-spacing: 0.45px;
-}
-
-.section__description {
-    font-family: 'Manrope';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 31px;
-    color: #555555;
-}
-
-.section__icons {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    position: relative;
-
-    .item-pic {
-        width: 166px;
-        height: 162px;
-
-        &:hover {
-            transform: scale(1.1);
-        }
     }
-}
-
-.right__section {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 50%;
-    align-items: center;
-    justify-content: space-evenly;
-    position: relative;
-
-    .section__back-pic {
+    .section__title {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 22px;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: $button_color;
+    }
+    .section__info {
+        font-family: 'Playfair Display';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 45px;
+        line-height: 58px;
+        letter-spacing: 0.45px;
+    }
+    .section__description {
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 31px;
+        color: #555555;
+    }
+    .section__icons {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        position: relative;
+        .item-pic {
+            width: 166px;
+            height: 162px;
+            &:hover {
+                transform: scale(1.1);
+            }
+    }
+    } 
+   
+    .right__section {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 50%;
+        align-items: center;
+        justify-content: space-evenly; 
+        position: relative;
+        .section__back-pic {
         max-width: 85%;
         position: absolute;
         right: 0;
-    }
-
-    .section__girl-pic {
+        }
+        .section__girl-pic {
         max-width: 85%;
         max-height: 85%;
-        z-index: 1;
-
+        z-index: 1; 
         &:hover {
             transform: scale(1.05);
         }
+        }
+    }
+/* section-gril end */
+
+/* media start */
+@media screen and (max-width: 960px) {
+    .header__burger {
+        display: block;
+    }
+    .header__nav {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: $button_color;
+        z-index: 10;
+        transform: translateX(100%);
+        transition: .2s all linear;
+        padding-left: 20%;
+        padding-top: 20%;    
+    }
+    .header__nav_active {
+        transform: translateX(0);
+    }
+    .header__item {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+    .header__item:last-child {
+        margin-bottom: 0;
+    }
+    .header__link {
+        font-size: larger;
+        line-height: 50px;
+    }
+
+    .header__nav-close {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 11;
+    }
+    .header__nav-close-line {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: white;
+        position: absolute;
+        top: 50%; 
+    }
+    .header__nav-close-line:first-child {
+        transform: translateY(-50%) rotate(45deg);
+    }
+    .header__nav-close-line:last-child {
+        transform: translateY(-50%) rotate(-45deg);
     }
 }
-
-/* section-gril end */
+    /* media end */
 
 // kris
 section {
@@ -1249,4 +1269,4 @@ footer {
 }
 }
 
-  /* media end */alexvolk
+  /* media end */
