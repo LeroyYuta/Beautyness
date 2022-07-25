@@ -320,5 +320,219 @@ body {
 
 
 /* section-end */
+
+/* form-start */
+
+ .offer__container{
+     display: flex;
+   
     
- 
+ }
+ .offer__information{
+     display:flex;
+     direction:column;
+     flex-wrap: wrap;
+     width: 50vw;
+    
+
+.offer__preview{
+        position: absolute;
+        height: 23px;
+        font-family: 'Manrope';
+        font-style:normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 22px;
+        letter-spacing: 1.5px;
+        color:#5C8692;
+        margin-top: 205px;
+        }
+        .offer__title{
+        position: relative;
+        max-width: 445px;
+        max-height: 176px;
+        left:0;
+        right: 22.61%;
+        margin-top: 231px;
+        font-family: 'Playfair Display';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 45px;
+        line-height: 58px;
+        letter-spacing: .45px;
+        color: #141414;
+        }
+        .offer__description{
+        max-width: 541px;
+        max-height: 62px;
+        position: relative; 
+        left: 0%;
+        margin-top:-185px;
+        right: 5.91%;
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height:31px;
+        color: #555555;
+        }
+        .offer__box{
+        display: flex;
+        flex-wrap:wrap;
+            
+        .contact__box{
+        display: flex;
+        display:column;
+        flex-wrap:wrap;
+        max-width: 302px;
+        max-height: 173px;
+        left:0%;
+        right:0%;
+        background-color: #FFFFFF;
+         margin-top: -250px;
+
+        .email_label, .call_label{
+        max-width: 64px;
+        max-height: 21px;
+        left: 0%;
+        right: 65.92%;
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 21px;
+        color: #141414;
+        }
+        .contact_email, .contact_phone{
+        height: 23px;
+        left: 0%;
+        right: -0.1%;
+        top: 19.83px;
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 22px;
+        letter-spacing: 1.2px;
+        color: #141414;
+        text-decoration: none;
+        }
+            
+        ul{
+        list-style: none;
+        }
+        }
+       
+        .offer__box1 {
+            max-width: 194px;
+            max-height: 173px;
+            background-color:#1E2C30;
+            margin-top: -250px;
+            color:#FFFFFF; 
+            text-align: center;
+            display: flex;
+            flex-wrap:wrap;
+    
+            .discount_header{
+            width: 109px;
+            height: 23px;
+            margin-left: 42px; 
+            margin-top: 22px;  
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 22px;        
+            letter-spacing: 1.5px; 
+            color: #FFFFFF;  
+          
+            }
+
+            .discount_body{
+            width: 144px;
+            height: 78px;
+            margin-left: 25px;
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 65px;
+            line-height: 78px;       
+            letter-spacing: 0.78px;     
+            color: #FFFFFF;     
+            }
+            .discount_footer{
+                width: 95px;
+                height: 27px;
+                margin-left: 49px;
+                margin-top: 5px;
+                margin-bottom:24px;
+                font-family: 'Manrope';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 27px;              
+                letter-spacing: 1.8px;
+
+                color: #FFFFFF; 
+            }
+        }   
+            }                     
+ }
+.register-box{
+   
+    width: 555px;
+    height: 690px;
+    background: #FFFFFF;
+    box-shadow:1px 0px 18px rgba (0,0,0,0.2);
+    border-radius: 0px;
+    left: 0%;
+    right: 0%;
+    margin-top:110px;
+    margin-bottom: 110px;
+
+
+    .register-box1{
+     display: flex;
+     direction: column;
+     flex-wrap: wrap;
+
+     .register-box1_name, .register-box1_email, .register-box1_phone, .register-box1_adress{
+        width: 455px;
+        height: 65px;
+        border: 2px solid #5C8692;
+        border-radius: 0px;
+        box-sizing: border-box;
+        top:calc(50%-65px/2-9.99px);
+        margin-left: 50px;
+        margin-right: 50px;
+        margin-bottom: 15px;
+     
+    }  
+    .register-box1_name{
+        margin-top:70px;
+    }
+    .register-box1_notes{
+        width: 455px;
+        height: 130px;
+        border: 2px solid #5C8692;
+        border-radius: 0px;
+        box-sizing: border-box;
+        margin-left: 50px;
+        margin-right: 50px;
+        margin-bottom: 15px;
+    }
+    .register-box1_button {
+        width: 455px;
+        height: 65px;
+        top:490.01px;
+        box-sizing: border-box;
+        margin-left: 50px;
+        margin-right: 50px;
+        background: #5C8692;
+        border: 2px solid #5C8692;
+        border-radius: 0px;
+    }
+    }          
+    }
+/* form-end */
+    
