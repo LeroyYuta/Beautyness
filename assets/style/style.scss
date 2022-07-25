@@ -488,7 +488,6 @@ display: none;
 form{
     display: flex;
     flex-direction: column;
-    padding-top: 10%;
     align-items: center;
     height: 40vh;
     justify-content: space-between;
@@ -587,14 +586,22 @@ form{
   
 
 }
+.form__btn{
+    padding-top: 40px;
+    width: 500px;
+    text-align: center;
+}
 .form__time,
 .form__procedura{
-    padding-top: 50px;
+    padding-top: 40px;
     text-align: center;
     padding-bottom: 30px;
 }
 .form__time{
     padding-bottom: 50px;
+}
+.form__group{
+    padding-bottom: 30px;
 }
 
 .modal {
