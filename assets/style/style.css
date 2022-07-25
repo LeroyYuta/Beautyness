@@ -379,7 +379,6 @@ body {
 }
 
 /* section-gril end */
-<<<<<<< HEAD
 /* media start */
 @media screen and (max-width: 960px) {
   .header__burger {
@@ -437,8 +436,6 @@ body {
   }
 }
 /* media end */
-=======
->>>>>>> e9b9103fde2a805059c0740d00f163a7a0a2014c
 section {
   max-width: 1200px;
   margin: 0 auto;
@@ -1126,84 +1123,14 @@ footer {
   padding: 41px 120px 46px 120px;
   letter-spacing: 0.17px;
   /* section-gril end */
-<<<<<<< HEAD
-  /* media start */
-=======
->>>>>>> e9b9103fde2a805059c0740d00f163a7a0a2014c
 }
 .box_2 .text__text {
   font-size: 17px;
   font-family: "Manrope", sans-serif;
   font-weight: 400;
 }
-<<<<<<< HEAD
-=======
 .box_2 .text__title {
   font-size: 22px;
   font-family: "Playfair Display", serif;
   font-weight: 400;
-}
-
-/* media start */
->>>>>>> e9b9103fde2a805059c0740d00f163a7a0a2014c
-@media screen and (max-width: 960px) {
-  .box_2 .header__burger {
-    display: block;
-  }
-  .box_2 .header__nav {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #5C8692;
-    z-index: 10;
-    transform: translateX(100%);
-    transition: 0.2s all linear;
-    padding-left: 20%;
-    padding-top: 20%;
-  }
-  .box_2 .header__nav_active {
-    transform: translateX(0);
-  }
-  .box_2 .header__item {
-    width: 100%;
-    margin-right: 0;
-    margin-bottom: 30px;
-  }
-  .box_2 .header__item:last-child {
-    margin-bottom: 0;
-  }
-  .box_2 .header__link {
-    font-size: larger;
-    line-height: 50px;
-  }
-  .box_2 .header__nav-close {
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    z-index: 11;
-  }
-  .box_2 .header__nav-close-line {
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: white;
-    position: absolute;
-    top: 50%;
-  }
-  .box_2 .header__nav-close-line:first-child {
-    transform: translateY(-50%) rotate(45deg);
-  }
-  .box_2 .header__nav-close-line:last-child {
-    transform: translateY(-50%) rotate(-45deg);
-  }
-}
-<<<<<<< HEAD
-
-/* media end *//*# sourceMappingURL=style.css.map */
-=======
-/* media start *//*# sourceMappingURL=style.css.map */
->>>>>>> e9b9103fde2a805059c0740d00f163a7a0a2014c
+}/*# sourceMappingURL=style.css.map */
