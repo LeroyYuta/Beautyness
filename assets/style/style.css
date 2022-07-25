@@ -72,6 +72,7 @@ section {
   display: flex;
   justify-content: space-between;
   color: blackColor;
+  transition: 1s;
 }
 .box .prise,
 .box .text {
@@ -81,6 +82,11 @@ section {
   font-size: 18px;
   line-height: 27px;
   color: #555555;
+  transition: 1s;
+}
+.box .title:hover,
+.box .text:hover {
+  transform: scale(1.1);
 }
 .box h3 {
   border-bottom: 3px solid #141414;
