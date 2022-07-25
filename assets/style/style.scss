@@ -10,7 +10,7 @@ $text__text: 'Manrope', sans-serif;
 }
 
 body {
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
 }
 
@@ -19,6 +19,33 @@ body {
 .container {
     margin: 0 auto;
     width: 1200px;
+
+    .button {
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .button__btn,
+    .button__btn-2 {
+        padding: 2%;
+        margin: 2%;
+        width: 230px;
+        font-size: 15px;
+        font-weight: 400;
+        font-family: $text__text;
+        letter-spacing: 1.56px;
+        border: 2px solid #5C8692;
+        background-color: white;
+
+        &:hover {
+            background-color: #5C8692;
+            color: $colorText;
+            border: 2px solid black;
+            transition-duration: 500ms;
+
+        }
+    }
 }
 
 .section_title {
@@ -33,20 +60,54 @@ body {
     display: flex;
     justify-content: space-around;
 
+    .box {
+        box-shadow: 0px 4px 10px rgb(165, 165, 165);
+
+        &:hover {
+            box-shadow: 3px 7px 12px rgb(165, 165, 165);
+            transition-duration: 500ms;
+        }
+    }
+
     .box:not(:last-child) {
         margin-right: 2%;
-
-        .box__img {
-            width: 387px;
-            height: 342px;
-
-            .box__img-img {
-                max-width: 100%;
-            }
-        }
     }
 }
 
+.box__text {
+    background-color: #EBF3F5;
+    height: 255px;
+}
+
+.box__text-title {
+    margin: 0;
+    font-size: 22px;
+    font-family: $text__title;
+    padding: 1%;
+    text-align: center;
+}
+
+.box__text-text {
+    font-size: 18px;
+    font-family: $text__text;
+    padding: 1%;
+    text-align: center;
+}
+
+.box__img {
+    width: 387px;
+    height: 342px;
+
+    .box__img-img {
+        max-width: 100%;
+    }
+}
+
+
+.wrapper-2 {
+    display: none;
+    padding-bottom: 11%;
+}
 
 
 //footer 
@@ -87,6 +148,13 @@ footer {
 .box_1 {
     padding: 70px 120px 21px 120px;
     align-items: center;
+
+    .social__item {
+        &:hover {
+            background-color: #5C8692;
+            transition-duration: 500ms;
+        }
+    }
 }
 
 .box_2 {
