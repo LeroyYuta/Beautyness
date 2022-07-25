@@ -383,7 +383,6 @@ body {
 }
 
 /* section-gril end */
-<<<<<<< HEAD
 section {
   max-width: 1200px;
   margin: 0 auto;
@@ -1070,6 +1069,7 @@ footer {
 .box_2 {
   padding: 41px 120px 46px 120px;
   letter-spacing: 0.17px;
+  /* section-gril end */
 }
 .box_2 .text__text {
   font-size: 17px;
@@ -1080,8 +1080,8 @@ footer {
   font-size: 22px;
   font-family: "Playfair Display", serif;
   font-weight: 400;
-}/*# sourceMappingURL=style.css.map */
-=======
+}
+
 /* media start */
 @media screen and (max-width: 960px) {
   .header__burger {
@@ -1139,4 +1139,3 @@ footer {
   }
 }
 /* media start *//*# sourceMappingURL=style.css.map */
->>>>>>> alexvolk
