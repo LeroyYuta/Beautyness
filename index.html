@@ -52,98 +52,98 @@
                 <div class="madal__inner">
                   <div class="madal__title">Registration for procedures</div>
                   <div class="close__madal">&times;</div>
-                  <form action="#">
-                    <div class="form__procedura">
-                      <button
-                        class="form__btn-procedura btn-procedura"
-                        type="menu"
-                        onclick="change(this)"
-                      >
-                        Deep Tissue
-                      </button>
-                      <button
-                        class="form__btn-procedura btn-procedura"
-                        type="menu"
-                        onclick="change(this)"
-                      >
-                        Body Scrub
-                      </button>
-                      <button
-                        class="form__btn-procedura btn-procedura"
-                        type="menu"
-                        onclick="change(this)"
-                      >
-                        Foot Massage
-                      </button>
-                      <button
-                        class="form__btn-procedura btn-procedura"
-                        type="menu"
-                        onclick="change(this)"
-                      >
-                        Scalp Treatments
-                      </button>
-                    </div>
-                    <div class="form__date">
-                      <input class="date" type="date" name="Date" id="date1" />
-                    </div>
-                    <div class="form__time">
-                      <button class="form__btn-time" onclick="change(this)">
-                        10:00
-                      </button>
-                      <button class="form__btn-time" onclick="change(this)">
-                        11:00
-                      </button>
-                      <button class="form__btn-time" onclick="change(this)">
-                        12:00
-                      </button>
-                      <button class="form__btn-time" onclick="change(this)">
-                        13:00
-                      </button>
-                      <button class="form__btn-time" onclick="change(this)">
-                        14:00
-                      </button>
-                      <button class="form__btn-time" onclick="change(this)">
-                        15:00
-                      </button>
-                      <button class="form__btn-time" onclick="change(this)">
-                        17:00
-                      </button>
-                      <button class="form__btn-time" onclick="change(this)">
-                        18:00
-                      </button>
-                      <button class="form__btn-time" onclick="change(this)">
-                        19:00
-                      </button>
-                      <button class="form__btn-time" onclick="change(this)">
-                        20:00
-                      </button>
-                    </div>
-                    <div class="form__group">
-                      <input
-                        class="form__input-name"
-                        name="formInput"
-                        id="name"
-                        type="text"
-                        placeholder="Name"
-                        pattern="^[А-Яа-яЁё\s]+$"
-                        required
-                      />
-                    </div>
-                    <div class="form__group">
-                      <input
-                        class="form__input-phone"
-                        name="formInput"
-                        id="phone"
-                        type="tel"
-                        placeholder="Phone number"
-                        required
-                        pattern="^[0-9]+$"
-                        maxlength="11"
-                      />
-                    </div>
-                    <button class="modal__btn" type="submit">Sign up</button>
-                  </form>
                 </div>
+                <form action="#">
+                  <div class="form__procedura">
+                    <button
+                      class="form__btn-procedura btn-procedura"
+                      type="menu"
+                      onclick="change(this)"
+                    >
+                      Deep Tissue
+                    </button>
+                    <button
+                      class="form__btn-procedura btn-procedura"
+                      type="menu"
+                      onclick="change(this)"
+                    >
+                      Body Scrub
+                    </button>
+                    <button
+                      class="form__btn-procedura btn-procedura"
+                      type="menu"
+                      onclick="change(this)"
+                    >
+                      Foot Massage
+                    </button>
+                    <button
+                      class="form__btn-procedura btn-procedura"
+                      type="menu"
+                      onclick="change(this)"
+                    >
+                      Scalp Treatments
+                    </button>
+                  </div>
+                  <div class="form__date">
+                    <input class="date" type="date" name="Date" id="date1" />
+                  </div>
+                  <div class="form__time">
+                    <button class="form__btn-time" onclick="change(this)">
+                      10:00
+                    </button>
+                    <button class="form__btn-time" onclick="change(this)">
+                      11:00
+                    </button>
+                    <button class="form__btn-time" onclick="change(this)">
+                      12:00
+                    </button>
+                    <button class="form__btn-time" onclick="change(this)">
+                      13:00
+                    </button>
+                    <button class="form__btn-time" onclick="change(this)">
+                      14:00
+                    </button>
+                    <button class="form__btn-time" onclick="change(this)">
+                      15:00
+                    </button>
+                    <button class="form__btn-time" onclick="change(this)">
+                      17:00
+                    </button>
+                    <button class="form__btn-time" onclick="change(this)">
+                      18:00
+                    </button>
+                    <button class="form__btn-time" onclick="change(this)">
+                      19:00
+                    </button>
+                    <button class="form__btn-time" onclick="change(this)">
+                      20:00
+                    </button>
+                  </div>
+                  <div class="form__group">
+                    <input
+                      class="form__input-name"
+                      name="formInput"
+                      id="name"
+                      type="text"
+                      placeholder="Name"
+                      pattern="^[a-zA-Z]+$"
+                      required
+                    />
+                  </div>
+                  <div class="form__group">
+                    <input
+                      class="form__input-phone"
+                      name="formInput"
+                      id="phone"
+                      type="tel"
+                      placeholder="Phone number"
+                      required
+                      pattern="[0-9]{11}"
+                      maxlength="11"
+                    />
+                  </div>
+                  <button class="modal__btn" type="submit">Sign up</button>
+                </form>
               </div>
             </div>
           </div>
@@ -184,27 +184,6 @@
                   <div class="close__madal">&times;</div>
                 </div>
                 <form action="#">
-                  <div class="form__group">
-                    <input
-                      class="form__input-name"
-                      name="formInput"
-                      type="text"
-                      placeholder="Name"
-                      pattern="^[А-Яа-яЁё\s]+$"
-                      required
-                    />
-                  </div>
-                  <div class="form__group">
-                    <input
-                      class="form__input-phone"
-                      name="formInput"
-                      type="tel"
-                      placeholder="Phone number"
-                      required
-                      pattern="^[0-9]+$"
-                      maxlength="11"
-                    />
-                  </div>
                   <div class="form__procedura">
                     <button
                       class="form__btn-procedura btn-procedura"
@@ -296,6 +275,27 @@
                     >
                       20:00
                     </button>
+                  </div>
+                  <div class="form__group">
+                    <input
+                      class="form__input-name"
+                      name="formInput"
+                      type="text"
+                      placeholder="Name"
+                      pattern="^[А-Яа-яЁё\s]+$"
+                      required
+                    />
+                  </div>
+                  <div class="form__group">
+                    <input
+                      class="form__input-phone"
+                      name="formInput"
+                      type="tel"
+                      placeholder="Phone number"
+                      required
+                      pattern="^[0-9]+$"
+                      maxlength="11"
+                    />
                   </div>
                   <button class="modal__btn" type="submit">Sign up</button>
                 </form>

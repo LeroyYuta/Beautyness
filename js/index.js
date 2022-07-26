@@ -15,10 +15,14 @@ let btns = document.querySelectorAll("*[data-madal-btn]");
 /////////
 const color = '#5C8692'; 
 const color2=' #fff';
+const color3 = '#fff'; 
+const color4=' #000';
 
 function change(identifier) {
  identifier.style.background = color;
  identifier.style.color = color2;
 }
+
+
 ///
    
