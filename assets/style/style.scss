@@ -1,14 +1,7 @@
 // lera testimonials-block
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"');
 @import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
-
-$fontP: 'Manrope';
-$fontH: 'Playfair Display';
-$backColor: #EBF3F5;
-$fontColorP: #5C8692;
-$fontColorH: #141414;
-$feedbackColor: #1E2C30;
-$textBackColor: #FFFFFF;
+@import "variables.scss";
 
 @mixin font($fontF, $fontS, $fontW, $lineH, $letterS) {
     font-family: $fontF;
@@ -48,17 +41,86 @@ html {
 
                 .testimonials-title {
                     @include font($fontH, 45px, 400, 58px, 0.45px);
-                    margin-top: 0;
                     text-align: center;
                     color: $fontColorH;
                 }
 
                 .feedback-block {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    flex-wrap: wrap;
-                    gap: 20px;
+
+                    .flex-wrapper {
+                        width: 60%;
+                        margin: 0 auto;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 20px;
+                        background-color: transparent;
+
+                        .slider-wrapper {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            position: relative;
+                            width: 100%;
+                            height: 50vh;
+                            background-color: transparent;
+
+                            .slide {
+                                opacity: 0;
+                                position: absolute;
+                                width: 90%;
+                                transition: 0.4s;
+                            }
+                        }
+
+                        .btn-prev,
+                        .btn-next {
+                            cursor: pointer;
+                            font-size: 25px;
+                            transition: 0.5s;
+                            color: $feedbackColor;
+                        }
+
+                        .btn-prev:hover {
+                            transform: scale(1.3);
+                        }
+
+                        .btn-next:hover {
+                            transform: scale(1.3);
+                        }
+                    }
+
+                    .dots-wrapper {
+                        display: flex;
+                        justify-content: center;
+
+                        @media screen and (max-width: 480px) {
+                            .dots-wrapper {
+                                margin-top: 3%;
+                            }
+                        }
+
+                        .active {
+                            background-color: $feedbackColor;
+                        }
+
+                        span {
+                            width: 15px;
+                            height: 15px;
+                            border-radius: 50%;
+                            background-color: $dotsNotActive;
+                            margin-right: 10px;
+                            cursor: pointer;
+                        }
+
+                        span:last-child {
+                            margin-right: 0;
+                        }
+                    }
+
+                    .active {
+                        opacity: 1 !important
+                    }
 
                     .feedback-one {
                         display: flex;
@@ -80,6 +142,12 @@ html {
                             font-family: $fontP;
                             font-weight: 400;
                             font-size: 19px;
+                        }
+
+                        @media screen and (max-width: 480px) {
+                            .feedback-text {
+                                font-size: 14px;
+                            }
                         }
                     }
 
@@ -109,6 +177,18 @@ html {
 
                             .client-country {
                                 @include font($fontP, 14px, 400, 21px, 0.42px);
+                            }
+                        }
+
+                        @media screen and (max-width: 680px) {
+                            .quote {
+                                display: none;
+                            }
+                        }
+
+                        @media screen and (max-width: 480px) {
+                            .feedback-client__img {
+                                display: none;
                             }
                         }
                     }
@@ -161,7 +241,6 @@ html {
                         justify-content: center;
                         padding: 0 10px;
 
-
                         .popup__content {
                             max-width: 800px;
                             padding: 30px;
@@ -194,6 +273,7 @@ html {
                                 flex-direction: column;
                                 align-items: center;
                                 justify-content: center;
+                                position: relative;
 
                                 >input,
                                 .textarea {
@@ -209,9 +289,9 @@ html {
                                 }
 
                                 .photo-load {
-                                        display: flex;
-                                        align-items: center;
-                                        justify-content: center;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
 
                                     >input {
                                         display: none;
