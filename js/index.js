@@ -17,10 +17,18 @@ const color = '#5C8692';
 const color2=' #fff';
 const color3 = '#fff'; 
 const color4=' #000';
+let isClicked = false;
+
 
 function change(identifier) {
- identifier.style.background = color;
- identifier.style.color = color2;
+ isClicked = !isClicked;
+ if (isClicked) {
+  identifier.style.background = color;
+  identifier.style.color = color2;
+} else {
+  identifier.style.background = color3;
+  identifier.style.color = color4;
+}
 }
 
 
@@ -33,7 +41,6 @@ function change(identifier) {
     img.addEventListener('mouseout', stopRotate); // останавливает функцию вращения
    }
    
-   
    function startRotate(event){
 const boxImg =  this.querySelector('.img');
 const halfHei = boxImg.offsetHeight / 2; // нашли середину опираясь на высоту и разделили пополам
@@ -45,3 +52,6 @@ boxImg.style.transform ='rotateX('+-(event.offsetY - halfHei)/10+'deg) rotateY('
     const boxImg =  this.querySelector('.img');
     boxImg.style.transform ='rotate(0)';   // сброс всех вычеслений
        }
+
+
+/////       
