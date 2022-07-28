@@ -31,8 +31,8 @@ body {
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 10px 20px;
   transition: 0.2s linear;
+  padding: 15px 0px;
 }
 .header .header__left-section {
   display: flex;
@@ -41,6 +41,7 @@ body {
 }
 .header .header__logo {
   margin-right: 35px;
+  padding-left: 0;
 }
 .header .header__phone-pic {
   position: relative;
@@ -62,7 +63,6 @@ body {
 }
 .header .header__list {
   display: flex;
-  flex-wrap: wrap;
   padding-right: 15px;
 }
 .header .header__item {
@@ -78,9 +78,9 @@ body {
   line-height: 26px;
   color: #141414;
 }
-.header .header__link:hover {
-  color: #5C8692;
-  font-size: 20px;
+.header .header__link:hover, .header .header__link:focus, .header .header__link:active {
+  opacity: 0.7;
+  font-size: 18px;
 }
 .header .header__pics {
   padding-right: 25px;
@@ -109,7 +109,7 @@ body {
   position: relative;
   top: 3;
 }
-.header .header__button:hover {
+.header .header__button:hover, .header .header__button:focus, .header .header__button:active {
   background-color: #141414;
 }
 
@@ -123,10 +123,10 @@ body {
 .burger__line {
   display: block;
   width: 100%;
-  height: 3px;
+  height: 5px;
   background-color: #141414;
   position: absolute;
-  right: 10;
+  left: 0;
 }
 
 .burger__line_first {
@@ -135,6 +135,7 @@ body {
 
 .burger__line_second {
   top: 50%;
+  transform: translateY(-50%);
 }
 
 .burger__line_third {
@@ -218,7 +219,7 @@ body {
   letter-spacing: 1.56px;
   text-transform: uppercase;
 }
-.main__information .main__button:hover {
+.main__information .main__button:hover, .main__information .main__button:focus, .main__information .main__button:active {
   background-color: #141414;
   color: #EBF3F5;
   transform: scale(1.05);
@@ -242,7 +243,7 @@ body {
   max-height: 90%;
   z-index: 1;
 }
-.main__image .header-girl:hover {
+.main__image .header-girl:hover, .main__image .header-girl:focus, .main__image .header-girl:active {
   transform: scale(1.05);
 }
 
@@ -263,10 +264,11 @@ body {
   position: relative;
   overflow: hidden;
 }
-.container-cards .content__cards .card__pic:hover {
+.container-cards .content__cards .card__pic:hover, .container-cards .content__cards .card__pic:focus, .container-cards .content__cards .card__pic:active {
   transform: scale(1.05);
 }
-.container-cards .card__title {
+
+.card__title {
   font-family: "Playfair Display";
   font-style: normal;
   font-weight: 400;
@@ -274,7 +276,8 @@ body {
   line-height: 36px;
   letter-spacing: 0.312px;
 }
-.container-cards .card__description {
+
+.card__description {
   font-family: "Manrope";
   font-style: normal;
   font-weight: 400;
@@ -381,8 +384,16 @@ body {
 /* section-gril end */
 /* media start */
 @media screen and (max-width: 960px) {
+  .header__pics {
+    display: none;
+  }
   .header__burger {
     display: block;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .header__container {
+    padding-top: 28px;
   }
   .header__nav {
     width: 100%;
@@ -392,10 +403,9 @@ body {
     left: 0;
     background-color: #5C8692;
     z-index: 10;
+    padding: 75px;
     transform: translateX(100%);
     transition: 0.2s all linear;
-    padding-left: 20%;
-    padding-top: 20%;
   }
   .header__nav_active {
     transform: translateX(0);
@@ -409,8 +419,9 @@ body {
     margin-bottom: 0;
   }
   .header__link {
-    font-size: larger;
-    line-height: 50px;
+    color: white;
+    font-size: 42px;
+    line-height: 48px;
   }
   .header__nav-close {
     width: 40px;
@@ -424,7 +435,7 @@ body {
     display: block;
     width: 100%;
     height: 2px;
-    background-color: white;
+    background-color: #fff;
     position: absolute;
     top: 50%;
   }
@@ -851,35 +862,29 @@ html body .testimonials-block .testimonials-container .popup .popup__body .popup
 }
 
 /* form-start */
-.offer__container {
+.offer {
+  min-height: 910px;
   display: flex;
-}
-
-.offer__information {
-  display: flex;
-  direction: column;
   flex-wrap: wrap;
-  width: 50vw;
+  justify-content: space-around;
 }
-.offer__information .offer__preview {
-  position: absolute;
-  height: 23px;
+.offer .section__offer {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50%;
+  justify-content: center;
+}
+.offer .section__offer .offer__preview {
   font-family: "Manrope";
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
   line-height: 22px;
   letter-spacing: 1.5px;
+  text-transform: uppercase;
   color: #5C8692;
-  margin-top: 205px;
 }
-.offer__information .offer__title {
-  position: relative;
-  max-width: 445px;
-  max-height: 176px;
-  left: 0;
-  right: 22.61%;
-  margin-top: 231px;
+.offer .section__offer .offer__title {
   font-family: "Playfair Display";
   font-style: normal;
   font-weight: 400;
@@ -888,13 +893,7 @@ html body .testimonials-block .testimonials-container .popup .popup__body .popup
   letter-spacing: 0.45px;
   color: #141414;
 }
-.offer__information .offer__description {
-  max-width: 541px;
-  max-height: 62px;
-  position: relative;
-  left: 0%;
-  margin-top: -185px;
-  right: 5.91%;
+.offer .section__offer .offer__description {
   font-family: "Manrope";
   font-style: normal;
   font-weight: 400;
@@ -902,155 +901,64 @@ html body .testimonials-block .testimonials-container .popup .popup__body .popup
   line-height: 31px;
   color: #555555;
 }
-.offer__information .offer__box {
+.offer .section__offer .offer__image:hover, .offer .section__offer .offer__image:focus, .offer .section__offer .offer__image:active {
+  transform: scale(1.05);
+}
+.offer .section__form {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  flex-basis: 50%;
+  justify-content: center;
+  align-items: flex-end;
 }
-.offer__information .offer__box .contact__box {
+.offer .section__frame {
   display: flex;
-  display: column;
-  flex-wrap: wrap;
-  max-width: 302px;
-  max-height: 173px;
-  left: 0%;
-  right: 0%;
-  background-color: #FFFFFF;
-  margin-top: -250px;
-}
-.offer__information .offer__box .contact__box .email_label,
-.offer__information .offer__box .contact__box .call_label {
-  max-width: 64px;
-  max-height: 21px;
-  left: 0%;
-  right: 65.92%;
-  font-family: "Manrope";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 21px;
-  color: #141414;
-}
-.offer__information .offer__box .contact__box .contact_email,
-.offer__information .offer__box .contact__box .contact_phone {
-  height: 23px;
-  left: 0%;
-  right: -0.1%;
-  top: 19.83px;
-  font-family: "Manrope";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 22px;
-  letter-spacing: 1.2px;
-  color: #141414;
-  text-decoration: none;
-}
-.offer__information .offer__box .contact__box ul {
-  list-style: none;
-}
-.offer__information .offer__box .offer__box1 {
-  max-width: 194px;
-  max-height: 173px;
-  background-color: #1E2C30;
-  margin-top: -250px;
-  color: #FFFFFF;
-  text-align: center;
-  display: flex;
-  flex-wrap: wrap;
-}
-.offer__information .offer__box .offer__box1 .discount_header {
-  width: 109px;
-  height: 23px;
-  margin-left: 42px;
-  margin-top: 22px;
-  font-family: "Manrope";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 22px;
-  letter-spacing: 1.5px;
-  color: #FFFFFF;
-}
-.offer__information .offer__box .offer__box1 .discount_body {
-  width: 144px;
-  height: 78px;
-  margin-left: 25px;
-  font-family: "Manrope";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 65px;
-  line-height: 78px;
-  letter-spacing: 0.78px;
-  color: #FFFFFF;
-}
-.offer__information .offer__box .offer__box1 .discount_footer {
-  width: 95px;
-  height: 27px;
-  margin-left: 49px;
-  margin-top: 5px;
-  margin-bottom: 24px;
-  font-family: "Manrope";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 27px;
-  letter-spacing: 1.8px;
-  color: #FFFFFF;
-}
-
-.register-box {
   width: 555px;
   height: 690px;
-  background: #FFFFFF;
-  box-shadow: 1px 0px 18px rgba 0, 0, 0, 0.2;
-  border-radius: 0px;
-  left: 0%;
-  right: 0%;
-  margin-top: 110px;
-  margin-bottom: 110px;
+  background-color: #fff;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-end;
 }
-.register-box .register-box1 {
+.offer .section__form {
   display: flex;
-  direction: column;
-  flex-wrap: wrap;
+  align-items: center;
 }
-.register-box .register-box1 .register-box1_name,
-.register-box .register-box1 .register-box1_email,
-.register-box .register-box1 .register-box1_phone,
-.register-box .register-box1 .register-box1_adress {
-  width: 455px;
-  height: 65px;
+.offer .section__field {
   border: 2px solid #5C8692;
-  border-radius: 0px;
-  box-sizing: border-box;
-  top: calc(50% - 32.5px - 9.99px);
-  margin-left: 50px;
-  margin-right: 50px;
-  margin-bottom: 15px;
+  width: 465px;
+  height: 55px;
+  position: relative;
+  margin-bottom: 20px;
 }
-.register-box .register-box1 .register-box1_name {
-  margin-top: 70px;
+.offer .section__field-person {
+  background: url(/assets/img/first_section/person-form.svg) no-repeat left;
 }
-.register-box .register-box1 .register-box1_notes {
-  width: 455px;
+.offer .section__field-mail {
+  background: url(/assets/img/first_section/mail-form.svg) no-repeat left;
+}
+.offer .section__field-phone {
+  background: url(/assets/img/first_section/phone-form.svg) no-repeat left;
+}
+.offer .section__field-book {
+  background: url(/assets/img/first_section/book-form.svg) no-repeat left;
+}
+.offer .section__field-note {
+  background: url(/assets/img/first_section/note-form.svg) no-repeat left top;
   height: 130px;
-  border: 2px solid #5C8692;
-  border-radius: 0px;
-  box-sizing: border-box;
-  margin-left: 50px;
-  margin-right: 50px;
-  margin-bottom: 15px;
 }
-.register-box .register-box1 .register-box1_button {
-  width: 455px;
-  height: 65px;
-  top: 490.01px;
-  box-sizing: border-box;
-  margin-left: 50px;
-  margin-right: 50px;
-  background: #5C8692;
-  border: 2px solid #5C8692;
-  border-radius: 0px;
+.offer .section__field-button {
+  background-color: #5C8692;
+  color: #fff;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 31px;
+}
+.offer .section__field-button:hover, .offer .section__field-button:focus, .offer .section__field-button:active {
+  font-size: 22px;
+  background-color: #1E2C30;
 }
 
 /* form-end Nata */

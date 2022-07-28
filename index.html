@@ -36,16 +36,19 @@
                     <nav class="header__nav">
                         <ul class="header__list">
                             <li class="header__item">
-                                <a href="#!" class="header__link">Home</a>
+                                <a href="#about" class="header__link js-scroll">About</a>
                             </li>
                             <li class="header__item">
-                                <a href="#!" class="header__link">About</a>
+                                <a href="#articles" class="header__link js-scroll">Articles</a>
                             </li>
                             <li class="header__item">
-                                <a href="#!" class="header__link">Pages</a>
+                                <a href="#price" class="header__link js-scroll">Price</a>
                             </li>
                             <li class="header__item">
-                                <a href="#!" class="header__link">Contact Us</a>
+                                <a href="#discount" class="header__link js-scroll">Discount</a>
+                            </li>
+                            <li class="header__item">
+                                <a href="#contacts" class="header__link js-scroll">Contacts</a>
                             </li>
                         </ul>
                         <div class="header__nav-close">
@@ -89,7 +92,7 @@
 
 
         <!--main start-->
-        <div class="main">
+        <div class="main" id="about">
             <div class="wrapper wrapper-blue">
                 <div class="wrapper__content">
                     <div class="main__container">
@@ -125,7 +128,7 @@
 
                 <div class="container-cards">
 
-                    <div class="content__cards">
+                    <div class="content__cards" id="articles">
                         <img class="card__pic" src="/assets/img/first_section/spa.jpg" alt="Spa & Massage">
                         <h2 class="card__title">
                             Spa & Massage
@@ -222,7 +225,7 @@
 
         <!-- section our services kris -->
         <section>
-            <div class="box">
+            <div class="box" id="price">
                 <p class="box__text">OUR SERVICES</p>
                 <h2 class="box__title">
                     Creative excellence and the<br />unparalleled hospitality
@@ -436,63 +439,60 @@
         <!-- section our awesome benefits kris -->
 
         <!-- section offer - Nata -->
-        <div class="offer">
-            <div class="wrapper wrapper-blue">
-                <div class="wrapper__content">
-                    <div class="offer__container">
-                        <div class="offer__information">
-                            <p class="offer__preview">
-                                FLAT DISCOUNT
-                            </p>
-                            <p class="offer__title">
-                                Claim upto 50% offer
-                                on the most popular
-                                services...
-                            </p>
-                            <p class="offer__description">
-                                Our Retreat is not meant to be an occasional treat, but rather a
-                                part of your routine that restores balance to your daily life.
-                            </p>
-                            <div class="offer__box">
-                                <div class="contact__box">
-                                    <ul>
-                                        <li>
-                                            <div class="email_label"> MAIL US: </div>
-                                            <div><a href="#!" class="contact_email"> info@beautyness.com
-                                                </a>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                    <ul>
-                                        <li>
-                                            <div class="call_label"> CALL US: </div>
-                                            <div><a href="#!" class="contact_phone"> (+1) 235 890 12
-                                                </a>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="offer__box1">
-                                    <div class="discount_header">- GET FLAT -</div>
-                                    <div class="discount_body">50%</div>
-                                    <div class="discount_footer">Discount</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="register-box">
-                            <form class="register-box1" action="">
-                                <input class=register-box1_name type="text" id="fname" placeholder="Name">
-                                <input class=register-box1_email type="email" id="femail" placeholder="Email">
-                                <input class=register-box1_phone type="phone" id="fphone" placeholder="Phone">
-                                <input class=register-box1_adress type="adress" id="fadress" placeholder="Address">
-                                <input class=register-box1_notes type="notes" id="fnotes" placeholder="Comments">
-                                <input class=register-box1_button type="button" id="fbutton">
+        <div class="wrapper wrapper-blue">
+            <div class="wrapper__content">
+                <div class="offer" id="discount">
+                    <div class="section__offer">
+                        <p class="offer__preview">
+                            Flat Discount
+                        </p>
+                        <h2 class="offer__title">
+                            Claim upto 50% offer
+                            on the most popular services...
+                        </h2>
+                        <p class="offer__description">
+                            Our Retreat is not meant to be an occasional treat, but rather a part of your routine that restores balance to your daily life.
+                        </p>
+                        <img class="offer__image" src="/assets/img/first_section/dicsount.svg" alt="50% offer">
+                    </div>
+
+                    <div class="section__form">
+                        <div class="section__frame">
+                            <form class="section__form">
+                                <input type="text" class="section__field section__field-person">
+                                <input type="email" class="section__field section__field-mail">
+                                <input type="number" class="section__field section__field-phone">
+                                <input type="text" class="section__field section__field-book">
+                                <input type="text" class="section__field section__field-note">
+                                <input type="button" class="section__field section__field-button" value="Send!">
                             </form>
                         </div>
                     </div>
+
                 </div>
             </div>
+
         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <!-- section offer - Nata -->
 
         <!--Latest Updates Alex-->
@@ -542,7 +542,7 @@
         <!--Latest Updates Alex-->
 
         <!--Footer Alex-->
-        <footer class="container">
+        <footer class="container" id="contacts">
             <div class="box_1">
                 <div class="logo">
                     <img class="logo__item" src="./assets/img/Beautyness footer/logo.png" alt="logo">
