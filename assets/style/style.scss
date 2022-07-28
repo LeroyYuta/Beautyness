@@ -1211,8 +1211,6 @@ form {
 // kris
 
 // lera testimonials-block
-
-
 html {
     margin: 0;
     padding: 0;
@@ -1243,28 +1241,90 @@ html {
 
                 .testimonials-title {
                     @include font($fontH, 45px, 400, 58px, 0.45px);
-                    margin-top: 0;
                     text-align: center;
                     color: $fontColorH;
                 }
 
                 .feedback-block {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    flex-wrap: wrap;
-                    gap: 20px;
 
-                    .feedback-one {
+                    .flex-wrapper {
+                        width: 60%;
+                        margin: 0 auto;
                         display: flex;
-                        flex-direction: column;
-                        flex-basis: 49%;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 20px;
+                        background-color: transparent;
+
+                        .slider-wrapper {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            position: relative;
+                            width: 100%;
+                            height: 50vh;
+                            background-color: transparent;
+
+                            .slide {
+                                opacity: 0;
+                                position: absolute;
+                                width: 90%;
+                                transition: 0.4s;
+                            }
+                        }
+
+                        .btn-prev,
+                        .btn-next {
+                            cursor: pointer;
+                            font-size: 25px;
+                            transition: 0.5s;
+                            color: $feedbackColor;
+                        }
+
+                        .btn-prev:hover {
+                            transform: scale(1.3);
+                        }
+
+                        .btn-next:hover {
+                            transform: scale(1.3);
+                        }
                     }
 
-                    .feedback-two {
+                    .dots-wrapper {
+                        display: flex;
+                        justify-content: center;
+
+                        @media screen and (max-width: 480px) {
+                            .dots-wrapper {
+                                margin-top: 3%;
+                            }
+                        }
+
+                        .active {
+                            background-color: $feedbackColor;
+                        }
+
+                        span {
+                            width: 15px;
+                            height: 15px;
+                            border-radius: 50%;
+                            background-color: $dotsNotActive;
+                            margin-right: 10px;
+                            cursor: pointer;
+                        }
+
+                        span:last-child {
+                            margin-right: 0;
+                        }
+                    }
+
+                    .active {
+                        opacity: 1 !important
+                    }
+
+                    .feedback-block {
                         display: flex;
                         flex-direction: column;
-                        flex-basis: 49%;
                     }
 
                     .feedback-text__block {
@@ -1275,6 +1335,12 @@ html {
                             font-family: $fontP;
                             font-weight: 400;
                             font-size: 19px;
+                        }
+
+                        @media screen and (max-width: 480px) {
+                            .feedback-text {
+                                font-size: 14px;
+                            }
                         }
                     }
 
@@ -1304,6 +1370,18 @@ html {
 
                             .client-country {
                                 @include font($fontP, 14px, 400, 21px, 0.42px);
+                            }
+                        }
+
+                        @media screen and (max-width: 680px) {
+                            .quote {
+                                display: none;
+                            }
+                        }
+
+                        @media screen and (max-width: 480px) {
+                            .feedback-client__img {
+                                display: none;
                             }
                         }
                     }
@@ -1356,7 +1434,6 @@ html {
                         justify-content: center;
                         padding: 0 10px;
 
-
                         .popup__content {
                             max-width: 800px;
                             padding: 30px;
@@ -1389,6 +1466,7 @@ html {
                                 flex-direction: column;
                                 align-items: center;
                                 justify-content: center;
+                                position: relative;
 
                                 >input,
                                 .textarea {

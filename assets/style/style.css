@@ -1048,26 +1048,75 @@ html body .testimonials-block .testimonials-container .testimonials-title {
   font-weight: 400;
   line-height: 58px;
   letter-spacing: 0.45px;
-  margin-top: 0;
   text-align: center;
   color: #141414;
 }
-html body .testimonials-block .testimonials-container .feedback-block {
+html body .testimonials-block .testimonials-container .feedback-block .flex-wrapper {
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: transparent;
+}
+html body .testimonials-block .testimonials-container .feedback-block .flex-wrapper .slider-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  background-color: transparent;
 }
-html body .testimonials-block .testimonials-container .feedback-block .feedback-one {
+html body .testimonials-block .testimonials-container .feedback-block .flex-wrapper .slider-wrapper .slide {
+  opacity: 0;
+  position: absolute;
+  width: 90%;
+  transition: 0.4s;
+}
+html body .testimonials-block .testimonials-container .feedback-block .flex-wrapper .btn-prev,
+html body .testimonials-block .testimonials-container .feedback-block .flex-wrapper .btn-next {
+  cursor: pointer;
+  font-size: 25px;
+  transition: 0.5s;
+  color: #1E2C30;
+}
+html body .testimonials-block .testimonials-container .feedback-block .flex-wrapper .btn-prev:hover {
+  transform: scale(1.3);
+}
+html body .testimonials-block .testimonials-container .feedback-block .flex-wrapper .btn-next:hover {
+  transform: scale(1.3);
+}
+html body .testimonials-block .testimonials-container .feedback-block .dots-wrapper {
+  display: flex;
+  justify-content: center;
+}
+@media screen and (max-width: 480px) {
+  html body .testimonials-block .testimonials-container .feedback-block .dots-wrapper .dots-wrapper {
+    margin-top: 3%;
+  }
+}
+html body .testimonials-block .testimonials-container .feedback-block .dots-wrapper .active {
+  background-color: #1E2C30;
+}
+html body .testimonials-block .testimonials-container .feedback-block .dots-wrapper span {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: rgba(30, 44, 48, 0.5725490196);
+  margin-right: 10px;
+  cursor: pointer;
+}
+html body .testimonials-block .testimonials-container .feedback-block .dots-wrapper span:last-child {
+  margin-right: 0;
+}
+html body .testimonials-block .testimonials-container .feedback-block .active {
+  opacity: 1 !important;
+}
+html body .testimonials-block .testimonials-container .feedback-block .feedback-block {
   display: flex;
   flex-direction: column;
-  flex-basis: 49%;
-}
-html body .testimonials-block .testimonials-container .feedback-block .feedback-two {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 49%;
 }
 html body .testimonials-block .testimonials-container .feedback-block .feedback-text__block {
   background-color: #FFFFFF;
@@ -1077,6 +1126,11 @@ html body .testimonials-block .testimonials-container .feedback-block .feedback-
   font-family: "Manrope";
   font-weight: 400;
   font-size: 19px;
+}
+@media screen and (max-width: 480px) {
+  html body .testimonials-block .testimonials-container .feedback-block .feedback-text__block .feedback-text {
+    font-size: 14px;
+  }
 }
 html body .testimonials-block .testimonials-container .feedback-block .feedback-client {
   padding: 22px;
@@ -1109,6 +1163,16 @@ html body .testimonials-block .testimonials-container .feedback-block .feedback-
   font-weight: 400;
   line-height: 21px;
   letter-spacing: 0.42px;
+}
+@media screen and (max-width: 680px) {
+  html body .testimonials-block .testimonials-container .feedback-block .feedback-client .quote {
+    display: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  html body .testimonials-block .testimonials-container .feedback-block .feedback-client .feedback-client__img {
+    display: none;
+  }
 }
 html body .testimonials-block .testimonials-container .feedback-btn__block {
   padding-top: 5%;
@@ -1195,6 +1259,7 @@ html body .testimonials-block .testimonials-container .popup .popup__body .popup
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 html body .testimonials-block .testimonials-container .popup .popup__body .popup__content .popup__text > input,
 html body .testimonials-block .testimonials-container .popup .popup__body .popup__content .popup__text .textarea {
