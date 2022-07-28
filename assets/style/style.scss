@@ -122,16 +122,9 @@ html {
                         opacity: 1 !important
                     }
 
-                    .feedback-one {
+                    .feedback-block {
                         display: flex;
                         flex-direction: column;
-                        flex-basis: 49%;
-                    }
-
-                    .feedback-two {
-                        display: flex;
-                        flex-direction: column;
-                        flex-basis: 49%;
                     }
 
                     .feedback-text__block {
@@ -301,7 +294,7 @@ html {
                                         display: inline-block;
                                         width: 75px;
                                         height: 75px;
-                                        background: url(../img/testimonials/load.png);
+                                        background: url(../img/tesimonials/load.png);
                                         background-size: 3em;
                                         background-repeat: no-repeat;
                                         background-position: center;

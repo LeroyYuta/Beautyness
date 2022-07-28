@@ -102,15 +102,9 @@ html body .testimonials-block .testimonials-container .feedback-block .dots-wrap
 html body .testimonials-block .testimonials-container .feedback-block .active {
   opacity: 1 !important;
 }
-html body .testimonials-block .testimonials-container .feedback-block .feedback-one {
+html body .testimonials-block .testimonials-container .feedback-block .feedback-block {
   display: flex;
   flex-direction: column;
-  flex-basis: 49%;
-}
-html body .testimonials-block .testimonials-container .feedback-block .feedback-two {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 49%;
 }
 html body .testimonials-block .testimonials-container .feedback-block .feedback-text__block {
   background-color: #FFFFFF;
@@ -283,7 +277,7 @@ html body .testimonials-block .testimonials-container .popup .popup__body .popup
   display: inline-block;
   width: 75px;
   height: 75px;
-  background: url(../img/testimonials/load.png);
+  background: url(../img/tesimonials/load.png);
   background-size: 3em;
   background-repeat: no-repeat;
   background-position: center;
