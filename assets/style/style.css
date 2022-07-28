@@ -966,6 +966,29 @@ html body .testimonials-block .testimonials-container .popup .popup__body .popup
   margin: 0 auto;
   width: 1200px;
 }
+.container .button {
+  display: flex;
+  justify-content: center;
+}
+.container .button__btn,
+.container .button__btn-2 {
+  padding: 2%;
+  margin: 2%;
+  width: 230px;
+  font-size: 15px;
+  font-weight: 400;
+  font-family: "Manrope", sans-serif;
+  letter-spacing: 1.56px;
+  border: 2px solid #5C8692;
+  background-color: white;
+}
+.container .button__btn:hover,
+.container .button__btn-2:hover {
+  background-color: #5C8692;
+  color: white;
+  border: 2px solid black;
+  transition-duration: 500ms;
+}
 
 .section_title {
   text-align: center;
@@ -979,15 +1002,44 @@ html body .testimonials-block .testimonials-container .popup .popup__body .popup
   display: flex;
   justify-content: space-around;
 }
-.wrapper .box:not(:last-child) {
-  margin-right: 2%;
+.wrapper .box {
+  box-shadow: 0px 4px 10px rgb(165, 165, 165);
 }
-.wrapper .box:not(:last-child) .box__img {
+.wrapper .box:hover {
+  box-shadow: 3px 7px 12px rgb(165, 165, 165);
+  transition-duration: 500ms;
+}
+.wrapper .box .box__text {
+  background-color: #EBF3F5;
+  height: 255px;
+}
+.wrapper .box .box__text-title {
+  margin: 0;
+  font-size: 22px;
+  font-family: "Playfair Display", serif;
+  padding: 1%;
+  text-align: center;
+}
+.wrapper .box .box__text-text {
+  font-size: 18px;
+  font-family: "Manrope", sans-serif;
+  padding: 1%;
+  text-align: center;
+}
+.wrapper .box .box__img {
   width: 387px;
   height: 342px;
 }
-.wrapper .box:not(:last-child) .box__img .box__img-img {
+.wrapper .box .box__img .box__img-img {
   max-width: 100%;
+}
+.wrapper .box:not(:last-child) {
+  margin-right: 2%;
+}
+
+.wrapper-2 {
+  display: none;
+  padding-bottom: 11%;
 }
 
 footer {
@@ -1026,11 +1078,14 @@ footer {
   padding: 70px 120px 21px 120px;
   align-items: center;
 }
+.box_1 .social__item:hover {
+  background-color: #5C8692;
+  transition-duration: 500ms;
+}
 
 .box_2 {
   padding: 41px 120px 46px 120px;
   letter-spacing: 0.17px;
-  /* section-gril end */
 }
 .box_2 .text__text {
   font-size: 17px;
@@ -1041,4 +1096,12 @@ footer {
   font-size: 22px;
   font-family: "Playfair Display", serif;
   font-weight: 400;
+}
+.box_2 a {
+  text-decoration: none;
+  color: white;
+}
+.box_2 a:hover {
+  color: #5C8692;
+  transition-duration: 500ms;
 }/*# sourceMappingURL=style.css.map */
