@@ -34,21 +34,25 @@ body {
   transition: 0.2s linear;
   padding: 15px 0px;
 }
-.header .header__left-section {
+
+.header__left-section {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
 }
-.header .header__logo {
+
+.header__logo {
   margin-right: 35px;
   padding-left: 0;
 }
-.header .header__phone-pic {
+
+.header__phone-pic {
   position: relative;
   top: 6;
   left: -3;
 }
-.header .header__phone-num {
+
+.header__phone-num {
   text-decoration: none;
   font-family: "Manrope";
   font-style: normal;
@@ -57,19 +61,23 @@ body {
   line-height: 24px;
   color: #141414;
 }
-.header .header__right-section {
+
+.header__right-section {
   display: flex;
   align-items: center;
 }
-.header .header__list {
+
+.header__list {
   display: flex;
   padding-right: 15px;
 }
-.header .header__item {
+
+.header__item {
   list-style-type: none;
   margin: 0px 19px;
 }
-.header .header__link {
+
+.header__link {
   text-decoration: none;
   font-family: "Manrope";
   font-style: normal;
@@ -78,19 +86,22 @@ body {
   line-height: 26px;
   color: #141414;
 }
-.header .header__link:hover, .header .header__link:focus, .header .header__link:active {
+.header__link:hover, .header__link:focus {
   opacity: 0.7;
   font-size: 18px;
 }
-.header .header__pics {
+
+.header__pics {
   padding-right: 25px;
 }
-.header .header__link-pic {
+
+.header__link-pic {
   margin: 0px 6px;
   text-decoration: none;
   width: 50%;
 }
-.header .header__button {
+
+.header__button {
   position: relative;
   background-color: #5C8692;
   width: 201px;
@@ -105,11 +116,11 @@ body {
   text-transform: uppercase;
   color: white;
 }
-.header .header__button .header__button-pic {
+.header__button .header__button-pic {
   position: relative;
   top: 3;
 }
-.header .header__button:hover, .header .header__button:focus, .header .header__button:active {
+.header__button:hover, .header__button:focus, .header__button:active {
   background-color: #141414;
 }
 
@@ -388,8 +399,11 @@ body {
 
 /* section-gril end */
 /* media start */
-@media screen and (max-width: 960px) {
-  .header__pics {
+@media screen and (max-width: 980px) {
+  .header__left-section {
+    margin-right: 250px;
+  }
+  .header__pics, .header__button {
     display: none;
   }
   .header__burger {
@@ -415,6 +429,10 @@ body {
   .header__nav_active {
     transform: translateX(0);
   }
+  .header__list {
+    display: flex;
+    flex-direction: column;
+  }
   .header__item {
     width: 100%;
     margin-right: 0;
@@ -424,9 +442,17 @@ body {
     margin-bottom: 0;
   }
   .header__link {
+    text-decoration: none;
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
     color: white;
-    font-size: 42px;
-    line-height: 48px;
+    line-height: 2;
+  }
+  .header__link:hover, .header__link:focus {
+    color: #1E2C30;
+    font-size: 50px;
   }
   .header__nav-close {
     width: 40px;
