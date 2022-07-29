@@ -42,14 +42,14 @@ function change(identifier) {
    }
    
    function startRotate(event){
-const boxImg =  this.querySelector('.img');
+const boxImg =  this.querySelector('.img__box');
 const halfHei = boxImg.offsetHeight / 2; // нашли середину опираясь на высоту и разделили пополам
 
 boxImg.style.transform ='rotateX('+-(event.offsetY - halfHei)/10+'deg) rotateY('+(event.offsetX - halfHei) /10+'deg)'
    } // deg (градус)
 
    function stopRotate(event){
-    const boxImg =  this.querySelector('.img');
+    const boxImg =  this.querySelector('.img__box');
     boxImg.style.transform ='rotate(0)';   // сброс всех вычеслений
        }
 
