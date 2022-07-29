@@ -223,6 +223,7 @@ body {
   background-color: #141414;
   color: #EBF3F5;
   transform: scale(1.05);
+  transition: 0.5s;
 }
 
 .main__image {
@@ -245,6 +246,7 @@ body {
 }
 .main__image .header-girl:hover, .main__image .header-girl:focus, .main__image .header-girl:active {
   transform: scale(1.05);
+  transition: 0.5s;
 }
 
 /* main end */
@@ -266,6 +268,7 @@ body {
 }
 .container-cards .content__cards .card__pic:hover, .container-cards .content__cards .card__pic:focus, .container-cards .content__cards .card__pic:active {
   transform: scale(1.05);
+  transition: 0.5s;
 }
 
 .card__title {
@@ -357,6 +360,7 @@ body {
 }
 .section__icons .item-pic:hover {
   transform: scale(1.1);
+  transition: 0.5s;
 }
 
 .right__section {
@@ -379,6 +383,7 @@ body {
 }
 .right__section .section__girl-pic:hover {
   transform: scale(1.05);
+  transition: 0.5s;
 }
 
 /* section-gril end */

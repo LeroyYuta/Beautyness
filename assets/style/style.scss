@@ -244,6 +244,7 @@ body {
             background-color: #141414;
             color: $header_background;
             transform: scale(1.05);
+            transition: 0.5s;
         }
     }
 }
@@ -266,6 +267,7 @@ body {
         z-index: 1;
         &:hover, &:focus, &:active {
             transform: scale(1.05);
+            transition: 0.5s;
         }
     }
 }
@@ -290,6 +292,7 @@ body {
         .card__pic{
             &:hover, &:focus, &:active {
                 transform: scale(1.05);
+                transition: 0.5s;
             }
         } 
         }
@@ -379,6 +382,7 @@ body {
             height: 162px;
             &:hover {
                 transform: scale(1.1);
+                transition: 0.5s;
             }
     }
     } 
@@ -401,6 +405,7 @@ body {
         z-index: 1; 
         &:hover {
             transform: scale(1.05);
+            transition: 0.5s;
         }
         }
     }
