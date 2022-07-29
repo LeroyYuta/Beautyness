@@ -112,77 +112,71 @@ body {
 
 footer {
     color: $colorText;
-    background-color: $bgColor
-}
+    background-color: $bgColor;
 
-.logo {
-    display: flex;
-    align-items: center;
+    .box_1,
+    .box_2 {
+        display: flex;
+        justify-content: space-between;
 
-    .logo__item_text {
-        margin-left: 21px;
-    }
-}
+        .logo {
+            display: flex;
+            align-items: center;
 
-.box_1,
-.box_2 {
-    display: flex;
-    justify-content: space-between;
-}
-
-.box_3 {
-    background-color: $bgColorBox_3;
-    height: 6%;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-
-    .box_3__text {
-        @include font;
-        font-size: 15px;
-    }
-}
-
-.box_1 {
-    padding: 70px 120px 21px 120px;
-    align-items: center;
-
-    .social__item {
-        &:hover {
-            background-color: #5C8692;
-            transition-duration: 500ms;
+            .logo__item_text {
+                margin-left: 21px;
+            }
         }
     }
-}
 
-.box_2 {
-    padding: 41px 120px 46px 120px;
-    letter-spacing: 0.17px;
+    .box_3 {
+        background-color: $bgColorBox_3;
+        height: 6%;
+        justify-content: center;
+        display: flex;
+        align-items: center;
 
-    .text__text {
-        font-size: 17px;
-        @include font;
-    }
-
-    .text__title {
-        font-size: 22px;
-        font-family: $text__title;
-        font-weight: 400;
-    }
-
-    a {
-        text-decoration: none;
-        color: $colorText;
-
-        &:hover {
-            color: #5C8692;
-            transition-duration: 500ms;
+        .box_3__text {
+            @include font;
+            font-size: 15px;
         }
     }
-}
 
-@media screen and (max-width:320px) {
-    .wrapper {
-        flex-direction: column;
+    .box_1 {
+        padding: 70px 120px 21px 120px;
+        align-items: center;
+
+        .social__item {
+            &:hover {
+                background-color: #5C8692;
+                transition-duration: 500ms;
+            }
+        }
+    }
+
+    .box_2 {
+        padding: 41px 120px 46px 120px;
+        letter-spacing: 0.17px;
+
+        .text__text {
+            font-size: 17px;
+            @include font;
+        }
+
+        .text__title {
+            font-size: 22px;
+            font-family: $text__title;
+            font-weight: 400;
+        }
+
+        a {
+            text-decoration: none;
+            color: $colorText;
+
+            &:hover {
+                color: #5C8692;
+                transition-duration: 500ms;
+            }
+        }
     }
 }
