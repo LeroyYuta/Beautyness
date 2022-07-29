@@ -9,7 +9,7 @@
   </head>
 
   <body>
-    <section>
+    <section class="section__1">
       <div class="box">
         <p class="box__text">OUR SERVICES</p>
         <h2 class="box__title">
@@ -53,7 +53,7 @@
                   <div class="madal__title">Registration for procedures</div>
                   <div class="close__madal">&times;</div>
                 </div>
-                <form action="#">
+                <form action="#" class="form" novalidate>
                   <div class="form__procedura">
                     <input
                       class="form__btn-procedura btn-procedura"
@@ -150,7 +150,7 @@
                   </div>
                   <div class="form__group">
                     <input
-                      class="form__input-name"
+                      class="form__input-name name"
                       name="formInput"
                       id="name"
                       type="text"
@@ -162,7 +162,7 @@
                   </div>
                   <div class="form__group">
                     <input
-                      class="form__input-phone"
+                      class="form__input-phone phone"
                       name="formInput"
                       id="phone"
                       type="tel"
@@ -173,7 +173,9 @@
                       value=""
                     />
                   </div>
-                  <button class="modal__btn" type="submit">Sign up</button>
+                  <button class="modal__btn" type="submit" onclick="clikMe()">
+                    Sign up
+                  </button>
                 </form>
               </div>
             </div>
@@ -214,7 +216,7 @@
                   <div class="madal__title">Registration for procedures</div>
                   <div class="close__madal">&times;</div>
                 </div>
-                <form action="#">
+                <form action="#" class="form">
                   <div class="form__procedura">
                     <input
                       class="form__btn-procedura btn-procedura"
@@ -311,7 +313,7 @@
                   </div>
                   <div class="form__group">
                     <input
-                      class="form__input-name"
+                      class="form__input-name name"
                       name="formInput"
                       type="text"
                       placeholder="Name"
@@ -321,7 +323,7 @@
                   </div>
                   <div class="form__group">
                     <input
-                      class="form__input-phone"
+                      class="form__input-phone phone"
                       name="formInput"
                       type="tel"
                       placeholder="Phone number"
@@ -330,7 +332,10 @@
                       maxlength="11"
                     />
                   </div>
-                  <button class="modal__btn" type="submit">Sign up</button>
+                  <button class="modal__btn" type="submit" onclick="clickMe()">
+                    Sign up
+                  </button>
+                  <div id="errorsInfo"></div>
                 </form>
               </div>
             </div>
@@ -341,7 +346,7 @@
         </div>
       </div>
     </section>
-    <section>
+    <section class="section__2">
       <div class="conteiner__2">
         <p class="conteiner__txt">Our Awesome Benefits</p>
         <h2 class="conteiner__tit">What you’ll get from Us</h2>
