@@ -154,7 +154,7 @@
                   </div>
                   <div class="form__group">
                     <input
-                      class="form__input-name name"
+                      class="form__input-name name__input"
                       name="formInput"
                       id="name"
                       type="text"
@@ -166,7 +166,7 @@
                   </div>
                   <div class="form__group">
                     <input
-                      class="form__input-phone phone"
+                      class="form__input-phone name__input"
                       name="formInput"
                       id="phone"
                       type="tel"
@@ -177,9 +177,10 @@
                       value=""
                     />
                   </div>
-                  <button class="modal__btn" type="submit" onclick="clikMe()">
+                  <button class="modal__btn" onclick="clickMe()">
                     Sign up
                   </button>
+                  <div class="errors__info"></div>
                 </form>
               </div>
             </div>
@@ -220,7 +221,7 @@
                   <div class="madal__title">Registration for procedures</div>
                   <div class="close__madal">&times;</div>
                 </div>
-                <form action="#" class="form">
+                <form action="#" class="form" novalidate>
                   <div class="form__procedura">
                     <input
                       class="form__btn-procedura btn-procedura"
@@ -317,7 +318,7 @@
                   </div>
                   <div class="form__group">
                     <input
-                      class="form__input-name name"
+                      class="form__input-name name__input2"
                       name="formInput"
                       type="text"
                       placeholder="Name"
@@ -327,7 +328,7 @@
                   </div>
                   <div class="form__group">
                     <input
-                      class="form__input-phone phone"
+                      class="form__input-phone name__input2"
                       name="formInput"
                       type="tel"
                       placeholder="Phone number"
@@ -336,10 +337,10 @@
                       maxlength="11"
                     />
                   </div>
-                  <button class="modal__btn" type="submit" onclick="clickMe()">
+                  <button class="modal__btn" onclick="clickMe()">
                     Sign up
                   </button>
-                  <div id="errorsInfo"></div>
+                  <div class="errors__info"></div>
                 </form>
               </div>
             </div>

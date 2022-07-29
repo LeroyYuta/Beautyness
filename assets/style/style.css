@@ -561,4 +561,7 @@ form {
   .modal__content {
     width: auto;
   }
+}
+.errors__info {
+  color: red;
 }/*# sourceMappingURL=style.css.map */

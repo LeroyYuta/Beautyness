@@ -9,7 +9,9 @@ let btns = document.querySelectorAll("*[data-madal-btn]");
           let close = modal.querySelector(".close__madal");
           close.addEventListener("click", () => {
             modal.style.display = "none";
+            document.querySelector('.errors__info').innerHTML = '';
           });
+
         });
       }
 /////////
@@ -54,4 +56,31 @@ boxImg.style.transform ='rotateX('+-(event.offsetY - halfHei)/10+'deg) rotateY('
        }
 
 
-/////       
+/////  
+let errors =[];     
+
+function clickValidity(input) {
+  
+  const validity = input.validity;
+  if(validity.valueMissing){
+    errors.push('Поле ' + input.placeholder + ' не заполнено');
+  }
+  
+}
+
+function clickMe(){
+ 
+  errors=[];
+  const inputs = document.getElementsByClassName('.name__input');
+
+  for(let input of inputs){
+    clickValidity(input);
+  }
+
+  document.querySelectorAll('.errors__info').innerHTML = errors.join('.<br>');
+}
+
+
+
+
+
