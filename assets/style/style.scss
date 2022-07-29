@@ -272,6 +272,7 @@ body {
             background-color: #141414;
             color: $header_background;
             transform: scale(1.05);
+            transition: 0.5s;
         }
     }
 }
@@ -299,6 +300,7 @@ body {
         &:focus,
         &:active {
             transform: scale(1.05);
+            transition: 0.5s;
         }
     }
 }
@@ -329,6 +331,7 @@ body {
             &:focus,
             &:active {
                 transform: scale(1.05);
+                transition: 0.5s;
             }
         }
     }
@@ -428,6 +431,7 @@ body {
 
         &:hover {
             transform: scale(1.1);
+            transition: 0.5s;
         }
     }
 }
@@ -453,6 +457,7 @@ body {
 
         &:hover {
             transform: scale(1.05);
+            transition: 0.5s;
         }
     }
 }
