@@ -265,6 +265,16 @@ html body .testimonials-block .testimonials-container .popup .popup__body .popup
 html body .testimonials-block .testimonials-container .popup .popup__body .popup__content .popup__text .textarea:hover {
   outline: 1px solid #1E2C30;
 }
+html body .testimonials-block .testimonials-container .popup .popup__body .popup__content .popup__text .rating-select {
+  margin: 1% 0;
+  padding: 2%;
+  font-family: "Playfair Display";
+  font-size: 20px;
+  color: #FFFFFF;
+  background-color: #1E2C30;
+  border: 1px solid #1E2C30;
+  border-radius: 20px;
+}
 html body .testimonials-block .testimonials-container .popup .popup__body .popup__content .popup__text .photo-load {
   display: flex;
   align-items: center;
