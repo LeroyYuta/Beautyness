@@ -79,7 +79,7 @@ function addWrapper() {
         });
     });
 }
-// load avatar photo
+// load prewie avatar photo
 document.querySelector('.client-photo').addEventListener('change', function photoReader() {
     if (this.files[0]) {
         let reader = new FileReader();
