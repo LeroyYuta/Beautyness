@@ -62,22 +62,26 @@ let errors =[];
 function clickValidity(input) {
   
   const validity = input.validity;
+  const procedura = document.querySelectorAll('.btn-procedura');
+
   if(validity.valueMissing){
-    errors.push('Поле ' + input.placeholder + ' не заполнено');
+    errors.push('The field ' + input.placeholder + ' is not filled');
   }
   
 }
 
 function clickMe(){
- 
+
   errors=[];
-  const inputs = document.getElementsByClassName('.name__input');
+  const inputs = document.querySelectorAll('input');
 
   for(let input of inputs){
     clickValidity(input);
   }
+ 
+  document.querySelector('.errors__info').innerHTML = errors.join('.<br>');
 
-  document.querySelectorAll('.errors__info').innerHTML = errors.join('.<br>');
+  
 }
 
 
