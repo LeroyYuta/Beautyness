@@ -1534,6 +1534,17 @@ html {
                                     }
                                 }
 
+                                .rating-select {
+                                    margin: 1% 0;
+                                    padding: 2%;
+                                    font-family: $fontH;
+                                    font-size: 20px;
+                                    color: $textBackColor;
+                                    background-color: $feedbackColor;
+                                    border: 1px solid $feedbackColor;
+                                    border-radius: 20px;
+                                }
+
                                 .photo-load {
                                     display: flex;
                                     align-items: center;

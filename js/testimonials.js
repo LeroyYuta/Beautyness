@@ -1,4 +1,3 @@
-// feedback module window
 import quote from '../assets/img/testimonials/quote.png';
 import zero_stars from '../assets/img/testimonials/0_stars.png';
 import one_stars from '../assets/img/testimonials/1_stars.png'
@@ -14,6 +13,8 @@ const popupBg = document.querySelector('.popup__body');
 const popupInfo = document.querySelectorAll('.form-info');
 const clientPhoto = document.querySelector('.label-photo');
 
+document.addEventListener('DOMContentLoaded', addWrapper);
+// feedback module window
 feedBtn.addEventListener('click', () => {
     popup.classList.add('open');
 })
@@ -27,7 +28,6 @@ document.addEventListener('click', (e) => {
         popup.classList.remove('open');
     }
 });
-
 // wrapper
 function addWrapper() {
     const prev = document.querySelector(".btn-prev");
@@ -79,9 +79,6 @@ function addWrapper() {
         });
     });
 }
-
-document.addEventListener('DOMContentLoaded', addWrapper)
-
 // load avatar photo
 document.querySelector('.client-photo').addEventListener('change', function photoReader() {
     if (this.files[0]) {
@@ -94,19 +91,24 @@ document.querySelector('.client-photo').addEventListener('change', function phot
         reader.readAsDataURL(this.files[0]);
     }
 });
-
 // validation
 function validatorForm() {
     const popupErrors = document.querySelector('.errors-message');
-
+    const ratingValue = document.querySelectorAll('.rating-value');
     let arrErrors = [];
     popupErrors.innerHTML = '';
 
     popupInfo.forEach(item => {
         if (item.value === '') {
-            arrErrors.push('error');
+            arrErrors.push('inputs_error');
         } else if (clientPhoto.style.backgroundImage === '') {
-            arrErrors.push('error');
+            arrErrors.push('photo_error');
+        }
+    })
+
+    ratingValue.forEach((item) => {
+        if (item.value == '') {
+            arrErrors.push('select_error')
         }
     })
 
@@ -116,18 +118,24 @@ function validatorForm() {
 
     if (arrErrors.length <= 0) {
         popupErrors.innerHTML = 'Successful!';
-
         return true;
     }
-
-    console.log(arrErrors);
 }
-
+// send new feedback block
 function sendFeedbackBlock() {
     const name = document.querySelector('.name').value;
     const surname = document.querySelector('.surname').value;
     const country = document.querySelector('.country').value;
     const text = document.querySelector('.textarea').value;
+    const ratingSelect = document.querySelector('.rating-select');
+    let stars;
+
+    ratingSelect.value == 0 ? stars = zero_stars :
+        ratingSelect.value == 1 ? stars = one_stars :
+        ratingSelect.value == 2 ? stars = two_stars :
+        ratingSelect.value == 3 ? stars = three_stars :
+        ratingSelect.value == 4 ? stars = four_stars :
+        ratingSelect.value == 5 ? stars = five_stars : 'Impossible..';
 
     let feedbackNewBlock = '';
     feedbackNewBlock += `                        
@@ -139,10 +147,10 @@ function sendFeedbackBlock() {
             </p>
         </div>
         <div class="feedback-client client">
-            <img class="feedback-client__img" src="${clientPhoto.style.backgroundImage.url}"
+            <img class="feedback-client__img" src="${photo}"
                 alt="client">
             <div class="feedback-client__name">
-                <img class="rating" src="${one_stars}" alt="rating">
+            <img class="rating" src=${stars} alt="rating">
                 <p class="client-name">${name} ${surname}</p>
                 <p class="client-country">${country}</p>
             </div>
@@ -155,7 +163,12 @@ function sendFeedbackBlock() {
     document.querySelector('.slider-wrapper').innerHTML += feedbackNewBlock;
     document.querySelector('.dots-wrapper').innerHTML += newDots;
 }
-
+// module window close after btn 'send'
+function closeForm() {
+    feedBtn.style.display = 'none';
+    popup.classList.remove('open');
+}
+// button 'send'
 document.querySelector('.reg-ok').addEventListener('click', () => {
     if (validatorForm()) {
         sendFeedbackBlock();
@@ -164,5 +177,6 @@ document.querySelector('.reg-ok').addEventListener('click', () => {
             clientPhoto.style.backgroundImage = '';
         })
         addWrapper();
+        setTimeout(closeForm, 1000);
     }
 })
