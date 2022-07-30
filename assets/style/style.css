@@ -88,7 +88,7 @@ body {
   line-height: 26px;
   color: #141414;
 }
-.header__link:hover, .header__link:focus, .header__link:active {
+.header__link:hover, .header__link:focus {
   opacity: 0.7;
   font-size: 18px;
 }
@@ -159,6 +159,8 @@ body {
 /* main start */
 .main__container {
   display: flex;
+  flex-wrap: wrap;
+  min-height: 885px;
   justify-content: space-between;
   padding-top: 70px;
   padding-bottom: 70px;
@@ -241,14 +243,12 @@ body {
 
 .main__image {
   display: flex;
-  flex-direction: column;
   flex-basis: 50%;
   align-items: center;
-  justify-content: space-evenly;
   position: relative;
 }
 .main__image .girl-wrapper {
-  max-width: 85%;
+  max-width: 90%;
   position: absolute;
   right: 0;
 }
@@ -262,6 +262,38 @@ body {
   transition: 0.5s;
 }
 
+@media screen and (max-width: 825px) {
+  .main__container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  .main__information {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    margin-left: 20px;
+  }
+  .main__image {
+    margin-top: 70px;
+    justify-content: center;
+    align-items: center;
+  }
+  .main__image .girl-wrapper {
+    display: none;
+  }
+  .main__image .header-girl {
+    max-width: 80%;
+    max-height: 80%;
+  }
+  .main__image .header-girl:hover, .main__image .header-girl:focus, .main__image .header-girl:active {
+    transform: scale(1.05);
+    transition: 0.5s;
+  }
+}
 /* main end */
 /* cards start */
 .container-cards {
@@ -321,6 +353,7 @@ body {
 /* section-gril start */
 .section__container {
   display: flex;
+  flex-wrap: wrap;
   padding-top: 70px;
   padding-bottom: 70px;
 }
@@ -375,6 +408,46 @@ body {
   transform: scale(1.1);
   transition: 0.5s;
 }
+.section__icons .section__title {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #5C8692;
+}
+.section__icons .section__info {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 45px;
+  line-height: 58px;
+  letter-spacing: 0.45px;
+}
+.section__icons .section__description {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 31px;
+  color: #555555;
+}
+.section__icons .section__icons {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  position: relative;
+}
+.section__icons .section__icons .item-pic {
+  width: 166px;
+  height: 162px;
+}
+.section__icons .section__icons .item-pic:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
 
 .right__section {
   display: flex;
@@ -399,6 +472,53 @@ body {
   transition: 0.5s;
 }
 
+@media screen and (max-width: 1017px) {
+  .section__container {
+    display: flex;
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  .section__container .left__section {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .section__icons {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    position: relative;
+  }
+  .section__icons .item-pic {
+    width: 166px;
+    height: 162px;
+  }
+  .section__icons .item-pic:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+  }
+  .right__section {
+    display: flex;
+    flex-basis: 100%;
+    align-items: center;
+    margin-top: 70px;
+  }
+  .right__section .section__back-pic {
+    max-width: 100%;
+    overflow: hidden;
+  }
+  .right__section .section__girl-pic {
+    max-width: 85%;
+    max-height: 85%;
+    z-index: 1;
+  }
+  .right__section .section__girl-pic:hover {
+    transform: scale(1.05);
+    transition: 0.5s;
+  }
+}
 /* section-gril end */
 /* media start */
 @media screen and (max-width: 980px) {
@@ -1421,18 +1541,23 @@ html body .testimonials-block .testimonials-container .popup .popup__body .popup
 }
 .offer .section__field-person {
   background: url(/assets/img/first_section/person-form.svg) no-repeat left;
+  background-size: 30px;
 }
 .offer .section__field-mail {
   background: url(/assets/img/first_section/mail-form.svg) no-repeat left;
+  background-size: 30px;
 }
 .offer .section__field-phone {
   background: url(/assets/img/first_section/phone-form.svg) no-repeat left;
+  background-size: 30px;
 }
 .offer .section__field-book {
   background: url(/assets/img/first_section/book-form.svg) no-repeat left;
+  background-size: 30px;
 }
 .offer .section__field-note {
   background: url(/assets/img/first_section/note-form.svg) no-repeat left top;
+  background-size: 30px;
   height: 130px;
 }
 .offer .section__field-button {
@@ -1449,6 +1574,105 @@ html body .testimonials-block .testimonials-container .popup .popup__body .popup
   background-color: #1E2C30;
 }
 
+@media screen and (max-width: 680px) {
+  .offer {
+    min-height: 980px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .offer .section__offer {
+    margin-bottom: 70px;
+    justify-content: center;
+    align-items: center;
+  }
+  .offer .section__offer .offer__preview {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #5C8692;
+  }
+  .offer .section__offer .offer__title {
+    font-family: "Playfair Display";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 38px;
+    letter-spacing: 0.45px;
+    color: #141414;
+  }
+  .offer .section__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 70px;
+  }
+  .offer .section__frame {
+    display: flex;
+    padding-top: 70px;
+    width: 555px;
+    height: 455px;
+    background-color: #fff;
+    justify-content: center;
+    align-items: center;
+  }
+  .offer .section__form {
+    display: flex;
+    align-items: center;
+  }
+  .offer .section__field {
+    border: 2px solid #5C8692;
+    width: 465px;
+    height: 65px;
+    position: relative;
+    margin-bottom: 30px;
+  }
+  .offer .section__field-person {
+    background: url(/assets/img/first_section/person-form.svg) no-repeat left;
+    background-size: 20px;
+  }
+  .offer .section__field-mail {
+    background: url(/assets/img/first_section/mail-form.svg) no-repeat left;
+    background-size: 20px;
+  }
+  .offer .section__field-phone {
+    background: url(/assets/img/first_section/phone-form.svg) no-repeat left;
+    background-size: 20px;
+  }
+  .offer .section__field-book {
+    background: url(/assets/img/first_section/book-form.svg) no-repeat left;
+    background-size: 20px;
+  }
+  .offer .section__field-note {
+    background: url(/assets/img/first_section/note-form.svg) no-repeat left top;
+    background-size: 20px;
+    height: 130px;
+  }
+  .offer .section__field-button {
+    background-color: #5C8692;
+    color: #fff;
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 31px;
+  }
+  .offer .section__field-button:hover, .offer .section__field-button:focus, .offer .section__field-button:active {
+    font-size: 22px;
+    background-color: #1E2C30;
+  }
+}
+@media screen and (max-width: 1174px) {
+  .section__offer {
+    margin: 70px 0;
+    justify-content: center;
+    align-items: center;
+  }
+}
 /* form-end Nata */
 .container {
   margin: 0 auto;

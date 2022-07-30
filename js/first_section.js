@@ -56,6 +56,14 @@ if (animItems.length > 0) {
         }
     }
 
+    if (window.innerWidth <= 979) {
+        for (let i = 0; i < menuLinks.length; i += 1) {
+            menuLinks[i].addEventListener('click', () => {
+                menu.classList.remove('header__nav_active');
+            });
+        }
+    }
+
 } () );
 
 
