@@ -70,7 +70,7 @@
                         <button class="header__button">
                             <i class="header__button-pic"><img src="/assets/img/first_section/reserv.svg"
                                     alt="reservation"></i>
-                            Reservation
+                                    <a class="header__button" href="#popup">Reservation</a>
                         </button>
                     </div>
                 </div>
@@ -95,7 +95,7 @@
                                 Your body does a lot for you, and your caring therapist can help you return the favor in
                                 a way that benefits both your physical and mental wellness.
                             </p>
-                            <button class="main__button">Make a reservation</button>
+                            <button class="main__button"><a class="main__button" href="#popup">Make a reservation</a></button>
                         </div>
                         <div class="main__image">
                             <img src="/assets/img/first_section/Rectangle.svg" alt="Rectangle" class="girl-wrapper">
@@ -105,11 +105,16 @@
                 </div>
             </div>
             <div id="popup" class="popup">
+                <a href="#about" class="popup__area"></a>
               <div class="popup__body">
                 <div class="popup__content">
-                  <a href="#!" class="popup__close"></a>
-                  <div class="popup__title"></div>
-                  <div class="popup__text"></div>
+                  <a href="#!" class="popup__close">x</a>
+                  <div class="popup__title">Leave your number, we will call you back</div>
+                  <div class="popup__text">
+                    <input class="popup__text" type="text" placeholder="Name">
+                    <input class="popup__text" type="number" placeholder="Phone number">
+                    <input class="popup__text" type="button" value="Send!" id="modal__send">
+                  </div>
 
                 </div>
               </div>
