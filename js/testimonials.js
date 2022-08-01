@@ -14,6 +14,57 @@ const popupInfo = document.querySelectorAll('.form-info');
 const clientPhoto = document.querySelector('.label-photo');
 
 document.addEventListener('DOMContentLoaded', addWrapper);
+// get info of localStorage
+document.addEventListener('DOMContentLoaded', () => {
+    if (localStorage.getItem('name') !== null) {
+        feedBtn.style.display = 'none';
+        let getInfoUser = {
+            name: localStorage.getItem('name'),
+            surname: localStorage.getItem('surname'),
+            country: localStorage.getItem('country'),
+            text: localStorage.getItem('text'),
+            rating: localStorage.getItem('rating'),
+            photo: localStorage.getItem('photo')
+        }
+
+        let stars;
+
+        getInfoUser.rating == 0 ? stars = zero_stars :
+            getInfoUser.rating == 1 ? stars = one_stars :
+            getInfoUser.rating == 2 ? stars = two_stars :
+            getInfoUser.rating == 3 ? stars = three_stars :
+            getInfoUser.rating == 4 ? stars = four_stars :
+            getInfoUser.rating == 5 ? stars = five_stars : 'Impossible..';
+
+        let feedbackNewBlock = '';
+        feedbackNewBlock += `                        
+        <div class="slide">
+        <div class="feedback-block">
+            <div class="feedback-text__block">
+                <p class="feedback-text">
+                    “ ${getInfoUser.text} “
+                </p>
+            </div>
+            <div class="feedback-client client">
+                <img class="feedback-client__img" src="${getInfoUser.photo}"
+                    alt="client">
+                <div class="feedback-client__name">
+                <img class="rating" src=${stars} alt="rating">
+                    <p class="client-name">${getInfoUser.name} ${getInfoUser.surname}</p>
+                    <p class="client-country">${getInfoUser.country}</p>
+                </div>
+                <img class="quote" src="${quote}" alt="quote">
+            </div>
+        </div>
+    </div>`;
+        let newDots = '';
+        newDots += `<span class="dot"></span>`
+        document.querySelector('.slider-wrapper').innerHTML += feedbackNewBlock;
+        document.querySelector('.dots-wrapper').innerHTML += newDots;
+
+        addWrapper();
+    }
+})
 // feedback module window
 feedBtn.addEventListener('click', () => {
     popup.classList.add('open');
@@ -124,10 +175,12 @@ function validatorForm() {
 }
 // send new feedback block
 function sendFeedbackBlock() {
-    const name = document.querySelector('.name').value;
-    const surname = document.querySelector('.surname').value;
-    const country = document.querySelector('.country').value;
-    const text = document.querySelector('.textarea').value;
+    let newFeed = {
+        name: document.querySelector('.name').value,
+        surname: document.querySelector('.surname').value,
+        country: document.querySelector('.country').value,
+        text: document.querySelector('.textarea').value
+    }
     const ratingSelect = document.querySelector('.rating-select');
     let stars;
 
@@ -144,7 +197,7 @@ function sendFeedbackBlock() {
     <div class="feedback-block">
         <div class="feedback-text__block">
             <p class="feedback-text">
-                “ ${text} “
+                “ ${newFeed.text} “
             </p>
         </div>
         <div class="feedback-client client">
@@ -152,8 +205,8 @@ function sendFeedbackBlock() {
                 alt="client">
             <div class="feedback-client__name">
             <img class="rating" src=${stars} alt="rating">
-                <p class="client-name">${name} ${surname}</p>
-                <p class="client-country">${country}</p>
+                <p class="client-name">${newFeed.name} ${newFeed.surname}</p>
+                <p class="client-country">${newFeed.country}</p>
             </div>
             <img class="quote" src="${quote}" alt="quote">
         </div>
@@ -164,6 +217,46 @@ function sendFeedbackBlock() {
     document.querySelector('.slider-wrapper').innerHTML += feedbackNewBlock;
     document.querySelector('.dots-wrapper').innerHTML += newDots;
 }
+//  save in JSON for servers
+function saveJson() {
+    let feedClient = {
+        name: document.querySelector('.name').value,
+        surname: document.querySelector('.surname').value,
+        country: document.querySelector('.country').value,
+        text: document.querySelector('.textarea').value,
+        rating: document.querySelector('.rating-select').value,
+        photo: localStorage.getItem('photo')
+    }
+
+    fetch("https://httpbin.org/post", {
+            method: 'POST',
+            body: JSON.stringify(feedClient),
+            headers: {
+                'Content-Type': 'application/json; charset=utf-8'
+            },
+        })
+        .then(response => response.json())
+        .then(user => {
+            console.log(user);
+        })
+        .catch(error => console.log(error));
+}
+// save in localStorage
+function saveLocal() {
+    let feedClient = {
+        name: document.querySelector('.name').value,
+        surname: document.querySelector('.surname').value,
+        country: document.querySelector('.country').value,
+        text: document.querySelector('.textarea').value,
+        rating: document.querySelector('.rating-select').value,
+        photo: localStorage.getItem('photo')
+    }
+    localStorage.setItem('name', feedClient.name);
+    localStorage.setItem('surname', feedClient.surname);
+    localStorage.setItem('country', feedClient.country);
+    localStorage.setItem('text', feedClient.text);
+    localStorage.setItem('rating', feedClient.rating);
+}
 // module window close after btn 'send'
 function closeForm() {
     feedBtn.style.display = 'none';
@@ -173,6 +266,8 @@ function closeForm() {
 document.querySelector('.reg-ok').addEventListener('click', () => {
     if (validatorForm()) {
         sendFeedbackBlock();
+        // saveJson();
+        saveLocal();
         popupInfo.forEach(item => {
             item.value = '';
             clientPhoto.style.backgroundImage = '';
