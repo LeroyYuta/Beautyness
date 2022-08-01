@@ -7,9 +7,9 @@ import four_stars from '../assets/img/testimonials/4_stars.png';
 import five_stars from '../assets/img/testimonials/5_stars.png';
 
 const feedBtn = document.querySelector('.feedback-btn');
-const feedClose = document.querySelector('.popup__close');
-const popup = document.querySelector('.popup');
-const popupBg = document.querySelector('.popup__body');
+const feedClose = document.querySelector('.feedback-popup__close');
+const popup = document.querySelector('.feedback-popup');
+const popupBg = document.querySelector('.feedback-popup__body');
 const popupInfo = document.querySelectorAll('.form-info');
 const clientPhoto = document.querySelector('.label-photo');
 

@@ -1430,11 +1430,11 @@ html body .testimonials-block .testimonials-container .feedback-btn__block .feed
   background-color: #FFFFFF;
   transition: 0.3s;
 }
-html body .testimonials-block .testimonials-container .popup.open {
+html body .testimonials-block .testimonials-container .feedback-popup.open {
   opacity: 1;
   visibility: visible;
 }
-html body .testimonials-block .testimonials-container .popup {
+html body .testimonials-block .testimonials-container .feedback-popup {
   position: fixed;
   width: 100%;
   height: 100%;
@@ -1448,14 +1448,14 @@ html body .testimonials-block .testimonials-container .popup {
   overflow-y: auto;
   transition: all 0.8s ease 0s;
 }
-html body .testimonials-block .testimonials-container .popup .popup__body {
+html body .testimonials-block .testimonials-container .feedback-popup .feedback-popup__body {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0 10px;
 }
-html body .testimonials-block .testimonials-container .popup .popup__body .popup__content {
+html body .testimonials-block .testimonials-container .feedback-popup .feedback-popup__body .feedback-popup__content {
   max-width: 800px;
   padding: 30px;
   color: #1E2C30;
@@ -1463,7 +1463,7 @@ html body .testimonials-block .testimonials-container .popup .popup__body .popup
   background-color: #FFFFFF;
   border: 5px solid #1E2C30;
 }
-html body .testimonials-block .testimonials-container .popup .popup__body .popup__content .popup__close {
+html body .testimonials-block .testimonials-container .feedback-popup .feedback-popup__body .feedback-popup__content .feedback-popup__close {
   position: absolute;
   right: 10px;
   top: 10px;
@@ -1475,7 +1475,7 @@ html body .testimonials-block .testimonials-container .popup .popup__body .popup
   border: none;
   cursor: pointer;
 }
-html body .testimonials-block .testimonials-container .popup .popup__body .popup__content .popup__title {
+html body .testimonials-block .testimonials-container .feedback-popup .feedback-popup__body .feedback-popup__content .feedback-popup__title {
   font-family: "Playfair Display";
   font-size: 36px;
   font-weight: 400;
@@ -1483,7 +1483,7 @@ html body .testimonials-block .testimonials-container .popup .popup__body .popup
   letter-spacing: 1.5px;
   margin: 1em 0px 1em 0px;
 }
-html body .testimonials-block .testimonials-container .popup .popup__body .popup__content .popup__text {
+html body .testimonials-block .testimonials-container .feedback-popup .feedback-popup__body .feedback-popup__content .feedback-popup__text {
   font-family: "Manrope";
   font-size: 16px;
   font-weight: 400;
@@ -1495,8 +1495,8 @@ html body .testimonials-block .testimonials-container .popup .popup__body .popup
   justify-content: center;
   position: relative;
 }
-html body .testimonials-block .testimonials-container .popup .popup__body .popup__content .popup__text > input,
-html body .testimonials-block .testimonials-container .popup .popup__body .popup__content .popup__text .textarea {
+html body .testimonials-block .testimonials-container .feedback-popup .feedback-popup__body .feedback-popup__content .feedback-popup__text > input,
+html body .testimonials-block .testimonials-container .feedback-popup .feedback-popup__body .feedback-popup__content .feedback-popup__text .textarea {
   font-family: "Manrope";
   font-size: 16px;
   font-weight: 400;
@@ -1507,11 +1507,11 @@ html body .testimonials-block .testimonials-container .popup .popup__body .popup
   border-radius: 20px;
   outline: none;
 }
-html body .testimonials-block .testimonials-container .popup .popup__body .popup__content .popup__text > input:hover,
-html body .testimonials-block .testimonials-container .popup .popup__body .popup__content .popup__text .textarea:hover {
+html body .testimonials-block .testimonials-container .feedback-popup .feedback-popup__body .feedback-popup__content .feedback-popup__text > input:hover,
+html body .testimonials-block .testimonials-container .feedback-popup .feedback-popup__body .feedback-popup__content .feedback-popup__text .textarea:hover {
   outline: 1px solid #1E2C30;
 }
-html body .testimonials-block .testimonials-container .popup .popup__body .popup__content .popup__text .rating-select {
+html body .testimonials-block .testimonials-container .feedback-popup .feedback-popup__body .feedback-popup__content .feedback-popup__text .rating-select {
   margin: 1% 0;
   padding: 2%;
   font-family: "Playfair Display";
@@ -1521,15 +1521,15 @@ html body .testimonials-block .testimonials-container .popup .popup__body .popup
   border: 1px solid #1E2C30;
   border-radius: 20px;
 }
-html body .testimonials-block .testimonials-container .popup .popup__body .popup__content .popup__text .photo-load {
+html body .testimonials-block .testimonials-container .feedback-popup .feedback-popup__body .feedback-popup__content .feedback-popup__text .photo-load {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-html body .testimonials-block .testimonials-container .popup .popup__body .popup__content .popup__text .photo-load > input {
+html body .testimonials-block .testimonials-container .feedback-popup .feedback-popup__body .feedback-popup__content .feedback-popup__text .photo-load > input {
   display: none;
 }
-html body .testimonials-block .testimonials-container .popup .popup__body .popup__content .popup__text .photo-load > label {
+html body .testimonials-block .testimonials-container .feedback-popup .feedback-popup__body .feedback-popup__content .feedback-popup__text .photo-load > label {
   display: inline-block;
   width: 75px;
   height: 75px;
@@ -1538,11 +1538,11 @@ html body .testimonials-block .testimonials-container .popup .popup__body .popup
   background-repeat: no-repeat;
   background-position: center;
 }
-html body .testimonials-block .testimonials-container .popup .popup__body .popup__content .popup__text .errors-message {
+html body .testimonials-block .testimonials-container .feedback-popup .feedback-popup__body .feedback-popup__content .feedback-popup__text .errors-message {
   padding-top: 2%;
   color: red;
 }
-html body .testimonials-block .testimonials-container .popup .popup__body .popup__content .popup__text .reg-ok {
+html body .testimonials-block .testimonials-container .feedback-popup .feedback-popup__body .feedback-popup__content .feedback-popup__text .reg-ok {
   font-family: "Playfair Display";
   font-size: 16px;
   font-weight: 400;
@@ -1556,7 +1556,7 @@ html body .testimonials-block .testimonials-container .popup .popup__body .popup
   border-radius: 10px;
   cursor: pointer;
 }
-html body .testimonials-block .testimonials-container .popup .popup__body .popup__content .popup__text .reg-ok:hover {
+html body .testimonials-block .testimonials-container .feedback-popup .feedback-popup__body .feedback-popup__content .feedback-popup__text .reg-ok:hover {
   color: #1E2C30;
   background-color: #FFFFFF;
   transition: 0.3s;
