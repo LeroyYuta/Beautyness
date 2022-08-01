@@ -86,6 +86,7 @@ document.querySelector('.client-photo').addEventListener('change', function phot
 
         reader.addEventListener('load', function () {
             clientPhoto.style.backgroundImage = 'url(' + reader.result + ')';
+            localStorage.setItem('photo', reader.result);
         }, false);
 
         reader.readAsDataURL(this.files[0]);
@@ -147,7 +148,7 @@ function sendFeedbackBlock() {
             </p>
         </div>
         <div class="feedback-client client">
-            <img class="feedback-client__img" src="${photo}"
+            <img class="feedback-client__img" src="${localStorage.getItem('photo')}"
                 alt="client">
             <div class="feedback-client__name">
             <img class="rating" src=${stars} alt="rating">
