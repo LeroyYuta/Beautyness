@@ -200,7 +200,7 @@
   </main>
 
   <!-- section our services kris -->
-  <section id="services">
+  <section class="section__1">
     <div class="box">
       <p class="box__text">OUR SERVICES</p>
       <h2 class="box__title">
@@ -208,34 +208,34 @@
       </h2>
       <div class="box__1">
         <div class="box__1-img box-img">
-          <img class="img" src="./assets/img/kris/IMAGE.png" alt="procedures" />
+          <img class="img__box" src="./assets/img/our_services/IMAGE.png" alt="procedures" />
         </div>
         <div class="box__1-prise">
-          <h3 class="box__1-title title">
-            Deep Tissue <b class="prise">from $48.00</b>
+          <h3 class="box__1-title title__box">
+            Deep Tissue <b class="prise__box">from $48.00</b>
           </h3>
-          <p class="box__1-text text">
+          <p class="box__1-text text__box">
             A therapeutic massage that used for relieving muscles.
           </p>
-          <h3 class="box__1-title title">
-            Body Scrub <b class="prise">from $18.00</b>
+          <h3 class="box__1-title title__box">
+            Body Scrub <b class="prise__box">from $18.00</b>
           </h3>
-          <p class="box__1-text text">
+          <p class="box__1-text text__box">
             Perfect way to relieve all that unwanted stress in body.
           </p>
-          <h3 class="box__1-title title">
-            Foot Massage <b class="prise">from $25.00</b>
+          <h3 class="box__1-title title__box">
+            Foot Massage <b class="prise__box">from $25.00</b>
           </h3>
-          <p class="box__1-text text">
+          <p class="box__1-text text__box">
             Get a relaxing massage focused on your feet and lower legs.
           </p>
-          <h3 class="box__1-title title">
-            Scalp Treatments <b class="prise">from $15.00</b>
+          <h3 class="box__1-title title__box">
+            Scalp Treatments <b class="prise__box">from $15.00</b>
           </h3>
-          <p class="box__1-text text">
+          <p class="box__1-text text__box">
             Superior gray creates a rich, natural look with less fading.
           </p>
-          <button data-madal-btn="modal" class="box__1-btn btn">
+          <button data-madal-btn="modal" class="box__1-btn btn__box">
             GET AN APPOINTMENT
           </button>
           <div data-modal-window="modal" class="modal__box">
@@ -244,7 +244,7 @@
                 <div class="madal__title">Registration for procedures</div>
                 <div class="close__madal">&times;</div>
               </div>
-              <form action="#">
+              <form action="#" class="form" method="post" novalidate>
                 <div class="form__procedura">
                   <input class="form__btn-procedura btn-procedura" type="button" value="Deep Tissue"
                     onclick="change(this)" />
@@ -257,9 +257,20 @@
 
                   <input class="form__btn-procedura btn-procedura" type="button" value=" Scalp Treatments"
                     onclick="change(this)" />
+                  <input class="form__btn-procedura btn-procedura" type="button" onclick="change(this)"
+                    value=" Fertility Massage" />
+
+                  <input class="form__btn-procedura btn-procedura" type="button" onclick="change(this)"
+                    value=" Blemish Buster" />
+
+                  <input class="form__btn-procedura btn-procedura" type="button" onclick="change(this)"
+                    value="Oxygen Facial" />
+
+                  <input class="form__btn-procedura btn-procedura" type="button" onclick="change(this)"
+                    value=" Lash Lift" />
                 </div>
                 <div class="form__date">
-                  <input class="date" type="date" name="Date" id="date1" />
+                  <input class="date" type="date" name="Date" placeholder="Date" id="date1" />
                 </div>
                 <div class="form__time">
                   <input type="button" value="10:00" class="form__btn-time" onclick="change(this)" />
@@ -274,14 +285,17 @@
                   <input type="button" value="19:00" class="form__btn-time" onclick="change(this)" />
                 </div>
                 <div class="form__group">
-                  <input class="form__input-name" name="formInput" id="name" type="text" placeholder="Name"
+                  <input class="form__input-name name__input" name="formInput" id="name" type="text" placeholder="Name"
                     pattern="^[a-zA-Z]+$" required value="" />
                 </div>
                 <div class="form__group">
-                  <input class="form__input-phone" name="formInput" id="phone" type="tel" placeholder="Phone number"
-                    required pattern="[0-9]{11}" maxlength="11" value="" />
+                  <input class="form__input-phone name__input" name="formInput" id="phone" type="tel"
+                    placeholder="Phone number" required pattern="[0-9]{11}" maxlength="11" value="" />
                 </div>
-                <button class="modal__btn" type="submit">Sign up</button>
+                <button class="modal__btn" type="button" onclick="clickMe()">
+                  Sign up
+                </button>
+                <div class="errors__info"></div>
               </form>
             </div>
           </div>
@@ -289,83 +303,36 @@
       </div>
       <div class="box__2">
         <div class="box__2-prise">
-          <h3 class="box__2-title title">
-            Fertility Massage <b class="prise">from $18.00</b>
+          <h3 class="box__2-title title__box">
+            Fertility Massage <b class="prise__box">from $18.00</b>
           </h3>
-          <p class="box__2-text text">
+          <p class="box__2-text text__box">
             Help support reproductive health, the menstrual cycle.
           </p>
-          <h3 class="box__2-title title">
-            Blemish Buster <b class="prise">from $40.00</b>
+          <h3 class="box__2-title title__box">
+            Blemish Buster <b class="prise__box">from $40.00</b>
           </h3>
-          <p class="box__2-text text">
+          <p class="box__2-text text__box">
             Deep cleansing facial rebalances to promote healthy skin.
           </p>
-          <h3 class="box__2-title title">
-            Oxygen Facial <b class="prise">from $32.00</b>
+          <h3 class="box__2-title title__box">
+            Oxygen Facial <b class="prise__box">from $32.00</b>
           </h3>
-          <p class="box__2-text text">
+          <p class="box__2-text text__box">
             Hydrates, tones, lifts, and adds radiance to the skin.
           </p>
-          <h3 class="box__2-title title">
-            Lash Lift <b class="prise">from $25.00</b>
+          <h3 class="box__2-title title__box">
+            Lash Lift <b class="prise__box">from $25.00</b>
           </h3>
-          <p class="box__2-text text">
+          <p class="box__2-text text__box">
             Treatment for natural lashes that can add curl and definition.
           </p>
-          <button data-madal-btn="modal2" class="box__1-btn btn">
+          <button data-madal-btn="modal" class="box__1-btn btn__box">
             GET AN APPOINTMENT
           </button>
-          <div data-modal-window="modal2" class="modal__box">
-            <div class="modal__content">
-              <div class="madal__inner">
-                <div class="madal__title">Registration for procedures</div>
-                <div class="close__madal">&times;</div>
-              </div>
-              <form action="#">
-                <div class="form__procedura">
-                  <input class="form__btn-procedura btn-procedura" type="button" onclick="change(this)"
-                    value=" Fertility Massage" />
-
-                  <input class="form__btn-procedura btn-procedura" type="button" onclick="change(this)"
-                    value=" Blemish Buster" />
-
-                  <input class="form__btn-procedura btn-procedura" type="button" onclick="change(this)"
-                    value="Oxygen Facial" />
-
-                  <input class="form__btn-procedura btn-procedura" type="button" onclick="change(this)"
-                    value=" Lash Lift" />
-                </div>
-                <div class="form__date">
-                  <input class="date" type="date" name="Date" id="date2" />
-                </div>
-                <div class="form__time">
-                  <input value="10:00" class="form__btn-time btn-time" type="button" onclick="change(this)" />
-                  <input value="11:00" class="form__btn-time btn-time" type="button" onclick="change(this)" />
-                  <input value="12:00" class="form__btn-time btn-time" type="button" onclick="change(this)" />
-                  <input value="13:00" class="form__btn-time btn-time" type="button" onclick="change(this)" />
-                  <input value="14:00" class="form__btn-time btn-time" type="button" onclick="change(this)" />
-                  <input value="15:00" class="form__btn-time btn-time" type="button" onclick="change(this)" />
-                  <input value="16:00" class="form__btn-time btn-time" type="button" onclick="change(this)" />
-                  <input value="17:00" class="form__btn-time btn-time" type="button" onclick="change(this)" />
-                  <input value="18:00" class="form__btn-time btn-time" type="button" onclick="change(this)" />
-                  <input value="19:00" class="form__btn-time btn-time" type="button" onclick="change(this)" />
-                </div>
-                <div class="form__group">
-                  <input class="form__input-name" name="formInput" type="text" placeholder="Name" pattern="^[a-zA-Z]+$"
-                    required />
-                </div>
-                <div class="form__group">
-                  <input class="form__input-phone" name="formInput" type="tel" placeholder="Phone number" required
-                    pattern="[0-9]{11}" maxlength="11" />
-                </div>
-                <button class="modal__btn" type="submit">Sign up</button>
-              </form>
-            </div>
-          </div>
         </div>
         <div class="box__2-img box-img">
-          <img class="img" src="./assets/img/kris/IMAGE1.png" alt="procedures" />
+          <img class="img__box" src="./assets/img/our_services/IMAGE1.png" alt="procedures" />
         </div>
       </div>
     </div>
@@ -480,31 +447,33 @@
   <!-- testimonials-block lera -->
 
   <!-- section our awesome benefits -->
-  <section>
+  <section class="section__2">
     <div class="conteiner__2">
       <p class="conteiner__txt">Our Awesome Benefits</p>
       <h2 class="conteiner__tit">What you’ll get from Us</h2>
       <div class="conteiner__box-1">
         <div class="conteiner__section">
-          <img class="conteinet__img img" src="./assets/img/kris/Frame.png" alt="frame" />
-          <h3 class="conteinet__title title">Built with you in mind</h3>
-          <p class="conteinet__text text">
+          <img class="conteinet__img imgs__cont" src="./assets/img/our_services/Frame.png" alt="frame" />
+          <h3 class="conteinet__title title__cont">Built with you in mind</h3>
+          <p class="conteinet__text text__cont">
             We know how important it is to maintain<br />
             strong relationships with clients.
           </p>
         </div>
         <div class="conteiner__section">
-          <img class="conteinet__img img" src="./assets/img/kris/Frame.png" alt="frame" />
-          <h3 class="conteinet__title title">The Perfect Salon Services</h3>
-          <p class="conteinet__text text">
+          <img class="conteinet__img imgs__cont" src="./assets/img/our_services/Frame.png" alt="frame" />
+          <h3 class="conteinet__title title__cont">
+            The Perfect Salon Services
+          </h3>
+          <p class="conteinet__text text__cont">
             Talented, educated, and fashion-forward<br />
             artists meet the unique needs of client.
           </p>
         </div>
         <div class="conteiner__section">
-          <img class="conteinet__img img" src="./assets/img/kris/Frame.png" alt="frame" />
-          <h3 class="conteinet__title title">Skin Deep Experiences</h3>
-          <p class="conteinet__text text">
+          <img class="conteinet__img imgs__cont" src="./assets/img/our_services/Frame.png" alt="frame" />
+          <h3 class="conteinet__title title__cont">Skin Deep Experiences</h3>
+          <p class="conteinet__text text__cont">
             Appropriate for all skin types, sun damage,<br />
             fine lines and wrinkles, acne, and oily.
           </p>
@@ -512,25 +481,27 @@
       </div>
       <div class="conteiner__box-2">
         <div class="conteiner__section">
-          <img class="conteinet__img img" src="./assets/img/kris/Frame.png" alt="frame" />
-          <h3 class="conteinet__title title">Essential Spa Pedicure</h3>
-          <p class="conteinet__text text">
+          <img class="conteinet__img imgs__cont" src="./assets/img/our_services/Frame.png" alt="frame" />
+          <h3 class="conteinet__title title__cont">Essential Spa Pedicure</h3>
+          <p class="conteinet__text text__cont">
             Indulge in a soothing foot bath along with a<br />
             callous smoothing exfoliating scrub.
           </p>
         </div>
         <div class="conteiner__section">
-          <img class="conteinet__img img" src="./assets/img/kris/Frame.png" alt="frame" />
-          <h3 class="conteinet__title title">Skilled Spa Services</h3>
-          <p class="conteinet__text text">
+          <img class="conteinet__img imgs__cont" src="./assets/img/our_services/Frame.png" alt="frame" />
+          <h3 class="conteinet__title title__cont">Skilled Spa Services</h3>
+          <p class="conteinet__text text__cont">
             Our skilled estheticians offer an array of<br />
             refreshing treatments.
           </p>
         </div>
         <div class="conteiner__section">
-          <img class="conteinet__img img" src="./assets/img/kris/Frame.png" alt="frame" />
-          <h3 class="conteinet__title title">Perfect & Natural Products</h3>
-          <p class="conteinet__text text">
+          <img class="conteinet__img imgs__cont" src="./assets/img/our_services/Frame.png" alt="frame" />
+          <h3 class="conteinet__title title__cont">
+            Perfect & Natural Products
+          </h3>
+          <p class="conteinet__text text__cont">
             We offer the very best in luxury beauty<br />
             products for both hair and skin.
           </p>
